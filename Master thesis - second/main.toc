@@ -1,0 +1,48 @@
+\contentsline {chapter}{Notation}{5}%
+\contentsline {chapter}{Introduction}{7}%
+\contentsline {chapter}{\numberline {1}Preliminaries}{13}%
+\contentsline {section}{\numberline {1.1}Fractional Brownian Motion}{13}%
+\contentsline {subsection}{\numberline {1.1.1}Main Basic Properties of the fractional Brownian motion}{14}%
+\contentsline {subsection}{\numberline {1.1.2}Stochastic Integral Representation: Mandelbrot-van Ness representation.}{15}%
+\contentsline {subsection}{\numberline {1.1.3}Long and Short Memory of the fractional Brownian motion.}{15}%
+\contentsline {subsection}{\numberline {1.1.4}Path Regularity and Rough behaviour of the fractional Brownian motion.}{17}%
+\contentsline {section}{\numberline {1.2}Riemann-Liouville integrals and derivatives of order $\alpha $}{21}%
+\contentsline {subsection}{\numberline {1.2.1}Fractional derivatives and integrals of powers}{24}%
+\contentsline {subsection}{\numberline {1.2.2}Rewriting in integral form the Riccati differential equation}{25}%
+\contentsline {chapter}{\numberline {2}Riccati's solution as Power Series }{27}%
+\contentsline {section}{\numberline {2.1}Finding the coefficients}{28}%
+\contentsline {section}{\numberline {2.2}Radius of Convergence}{29}%
+\contentsline {subsection}{\numberline {2.2.1}Particular Case $\lambda = 0$}{30}%
+\contentsline {subsection}{\numberline {2.2.2}About Accuracy and Truncation of the series}{32}%
+\contentsline {chapter}{\numberline {3}Euler Discretization Scheme}{33}%
+\contentsline {section}{\numberline {3.1}Estimates of the radius $R_\psi $ and accuracy}{34}%
+\contentsline {subsection}{\numberline {3.1.1}Two estimates for the radius of convergence $R_\psi $ }{34}%
+\contentsline {subsection}{\numberline {3.1.2}Accuracy In truncating}{35}%
+\contentsline {section}{\numberline {3.2}Hybrid Expansion}{35}%
+\contentsline {subsection}{\numberline {3.2.1}Case 1: $T< \theta \setbox \z@ \hbox {\mathsurround \z@ $\textstyle R$}\mathaccent "0362{R}_\psi $.}{35}%
+\contentsline {subsection}{\numberline {3.2.2}Case 2: $T > \theta \setbox \z@ \hbox {\mathsurround \z@ $\textstyle R$}\mathaccent "0362{R}_\psi $.}{36}%
+\contentsline {subsection}{\numberline {3.2.3}Euler Scheme}{36}%
+\contentsline {subsection}{\numberline {3.2.4}How good does $\bar {\psi }^n$ approximate $\psi $?}{37}%
+\contentsline {section}{\numberline {3.3}Extrapolated Hybrid Method}{38}%
+\contentsline {subsection}{\numberline {3.3.1}Multistep extrapolated hybrid method}{38}%
+\contentsline {chapter}{\numberline {4}Numerical Test: Hybrid Euler scheme.}{41}%
+\contentsline {section}{\numberline {4.1}General Procedure}{41}%
+\contentsline {subsection}{\numberline {4.1.1}Real Results}{42}%
+\contentsline {subsection}{\numberline {4.1.2}Computational Optimization and Observations}{45}%
+\contentsline {section}{\numberline {4.2}Computing $c_1$}{46}%
+\contentsline {subsection}{\numberline {4.2.1}Plots and confirmation of the RR estimates}{47}%
+\contentsline {subsection}{\numberline {4.2.2}Computational times for the sequence $\left \{ \bar {c}_1^n \right \}_{n\in \mathbb {N}}$.}{50}%
+\contentsline {section}{\numberline {4.3}Richardson-Romberg's extrapolations.}{50}%
+\contentsline {section}{\numberline {4.4}Another Test with different parameters}{52}%
+\contentsline {section}{\numberline {4.5}Additional Tests?}{56}%
+\contentsline {chapter}{\numberline {5}Other Plus final comments}{57}%
+\contentsline {section}{\numberline {5.1}Forse aggiungerà la parte di machine learning se andrò in russia.}{57}%
+\contentsline {section}{\numberline {5.2}Commenti finali}{57}%
+\contentsline {subsection}{\numberline {5.2.1}Cose tralasciate}{57}%
+\contentsline {chapter}{\numberline {A}Python Code: Hybrid Euler Scheme}{61}%
+\contentsline {section}{\numberline {A.1}Computing $\left \{ \bar {\psi }^n\right \}_{n\in \mathbb {N}}$.}{61}%
+\contentsline {section}{\numberline {A.2}Computing $\left \{ \bar {c_1}^n \right \}_{n\in \mathbb {N}}$.}{64}%
+\contentsline {section}{\numberline {A.3}Richardson-Romberg's estimates.}{65}%
+\contentsline {chapter}{\numberline {B}Python Code: Machine Learning Parts}{67}%
+\contentsline {section}{\numberline {B.1}First Neural Networks}{67}%
+\contentsline {section}{\numberline {B.2}Others}{67}%
