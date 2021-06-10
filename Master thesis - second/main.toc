@@ -34,15 +34,15 @@
 \contentsline {subsection}{\numberline {4.2.2}Computational times for the sequence $\left \{ \bar {c}_1^n \right \}_{n\in \mathbb {N}}$.}{50}%
 \contentsline {section}{\numberline {4.3}Richardson-Romberg's extrapolations.}{50}%
 \contentsline {section}{\numberline {4.4}Another Test with different parameters}{52}%
-\contentsline {section}{\numberline {4.5}Additional Tests?}{56}%
-\contentsline {chapter}{\numberline {5}Other Plus final comments}{57}%
-\contentsline {section}{\numberline {5.1}Forse aggiungerà la parte di machine learning se andrò in russia.}{57}%
-\contentsline {section}{\numberline {5.2}Commenti finali}{57}%
-\contentsline {subsection}{\numberline {5.2.1}Cose tralasciate}{57}%
-\contentsline {chapter}{\numberline {A}Python Code: Hybrid Euler Scheme}{61}%
-\contentsline {section}{\numberline {A.1}Computing $\left \{ \bar {\psi }^n\right \}_{n\in \mathbb {N}}$.}{61}%
-\contentsline {section}{\numberline {A.2}Computing $\left \{ \bar {c_1}^n \right \}_{n\in \mathbb {N}}$.}{64}%
-\contentsline {section}{\numberline {A.3}Richardson-Romberg's estimates.}{65}%
-\contentsline {chapter}{\numberline {B}Python Code: Machine Learning Parts}{67}%
-\contentsline {section}{\numberline {B.1}First Neural Networks}{67}%
-\contentsline {section}{\numberline {B.2}Others}{67}%
+\contentsline {section}{\numberline {4.5}Additional Tests?}{57}%
+\contentsline {chapter}{\numberline {5}Other Plus final comments}{59}%
+\contentsline {section}{\numberline {5.1}Forse aggiungerà la parte di machine learning se andrò in russia.}{59}%
+\contentsline {section}{\numberline {5.2}Commenti finali}{59}%
+\contentsline {subsection}{\numberline {5.2.1}Cose tralasciate}{59}%
+\contentsline {chapter}{\numberline {A}Python Code: Hybrid Euler Scheme}{63}%
+\contentsline {section}{\numberline {A.1}Computing $\left \{ \bar {\psi }^n\right \}_{n\in \mathbb {N}}$.}{63}%
+\contentsline {section}{\numberline {A.2}Computing $\left \{ \bar {c_1}^n \right \}_{n\in \mathbb {N}}$.}{66}%
+\contentsline {section}{\numberline {A.3}Richardson-Romberg's estimates.}{67}%
+\contentsline {chapter}{\numberline {B}Python Code: Machine Learning Parts}{69}%
+\contentsline {section}{\numberline {B.1}First Neural Networks}{69}%
+\contentsline {section}{\numberline {B.2}Others}{69}%

@@ -1309,12 +1309,13 @@ for some constants $c_1$, $c_2$. \\
 Then we can apply a multistep Richardson-Romberg extrapolation (for more details see \cite{RR3extr}):
 \begin{equation}
     \label{eq: multiStepRR}
-    \bar{\psi}^n_{_{RR,3}}(T) = \frac{1}{3} \bar{\psi}^{n/4}(T) - 2 \bar{\psi}^{n/2}(T) + \frac{8}{3}\bar{\psi}^n(T)
+    \bar{\psi}^n_{_{RR,3}}(T) := \frac{1}{3} \bar{\psi}^{n/4}(T) - 2 \bar{\psi}^{n/2}(T) + \frac{8}{3}\bar{\psi}^n(T)
 \end{equation}
 defined for $n$ multiple of four and 
 where the weights $\frac{1}{3}$, $-2$ and $\frac{8}{3}$ are not chosen randomly (see \cite{RR3extr}). With these weights, it follows
 
-\begin{equation*}
+\begin{equation}
+\label{eq: rr3 convergence rate}
     \begin{aligned}
     \bar{\psi}^n_{_{RR,3}}(T) - \psi(T) &= \frac{1}{3}\left( \bar{\psi}^{n/4}(T) - \bar{\psi}(T) \right) - 2 \left(\bar{\psi}^{n/2}(T) - \bar{\psi} (T) \right) + \frac{8}{3} \left( \bar{\psi} ^n (T) - \bar{\psi}(T)\right)
     \\
@@ -1668,15 +1669,11 @@ However, in all of this, it is noted in \cite{Main} that the regression coeffici
 \textcolor{red}{to write better}
 \\
 \\
-These observations suggest that the RR estimate of second order (eq. \eqref{eq: moreAccurateEstimate}) and the estimate in equation \eqref{eq: estimateRRwithbeta} do not hold true.
-Therefore it seems reasonable not to use the double step RR extrapolation described in Subsection \ref{subsection: multiStepRR} and equation \eqref{eq: multiStepRR}, which is just obtained from the RR estimate \eqref{eq: moreAccurateEstimate} of second order. 
+
+These observations suggest that the RR estimate of second order (eq. \eqref{eq: moreAccurateEstimate}) and the estimate in equation \eqref{eq: estimateRRwithbeta} do not hold true. However, all this does not imply that the double step RR extrapolation (described in Subsection \ref{subsection: multiStepRR} and equation \eqref{eq: multiStepRR}) is useless: we remind that $\left\{ \bar{\psi}^n_{_{RR,3}} \right\}_{n \in \mathbb{N}}$ does converge to $\psi$ (as $n\to +\infty$), but the convergence rate \eqref{eq: rr3 convergence rate} might not hold true since the second order RR estimate \eqref{eq: moreAccurateEstimate}, from which it follows, seems not to hold. 
 \\
-However, we will see in Section \ref{section: confirmingRR3} that the double step RR extrapolation could have a numerical validity. 
-%The sequence of estimates $\left\{ \bar{\psi}^n_{_{RR,3}} \right\}_{n \in \mathbb{N}}$ seems to converge 
-%(as $n\to +\infty$) to the same limit as that of the sequence $\left\{ \bar{\psi}^n_{_{RR,2}} \right\}_{n \in \mathbb{N}}$ given by the single step RR extrapolation method (described in Section \ref{section: %extrapolatedhyb} and equation \eqref{eq: RR.1}), namely
-%$$ \lim_{n\to +\infty}\bar{\psi}^n_{_{RR,3}}(T)  = \lim_{n\to +\infty}\bar{\psi}^n_{_{RR,2}}(T), $$
-%which should be equal to $\psi(T)$ if the first order RR estimate (eq. \eqref{eq: 30inthepaper}) holds true. 
-%Furthermore, we have also seen in Section \ref{section: computingc1} that this estimate seems to hold true numerically, meaning that the single step RR extrapolation is likely to be a good method in %approximateing $\psi(T)$. Therefore, the second step RR extrapolation is not to be totally thrown as it is likely to have a numerical validity.
+Below in Section \ref{section: confirmingRR3} we will compare the computation times between the single step RR extrapolation method and the double step (i.e., computation times in seconds of $\left\{ \bar{\psi}^n_{_{RR,2}} \right\}_{n \in \mathbb{N}}$ and $\left\{ \bar{\psi}^n_{_{RR,3}} \right\}_{n \in \mathbb{N}}$, respectively, for some values of $n$) and the convergence rate in function of $n$.
+
 
 
 \subsection{Computational times for the sequence $\left\{ \bar{c}_1^n \right\}_{n\in\mathbb{N}}$.}
@@ -1695,42 +1692,59 @@ Applying a linear regression to the curve in Figure \ref{comptimes} yields a coe
 
 \section{Richardson-Romberg's extrapolations.}
 \label{section: confirmingRR3}
-As anticipated in Subsection \ref{subsection: plots and confirm rr estimate}, the double step RR extrapolation might have a numerical validity, even though the estimate (the RR estimate of second order from equation \ref{section: confirmingRR3}) from which it is based on does not seem to hold. 
-\\ 
-The numerical validity is given by the following argument:
-the sequence of estimates $\left\{ \bar{\psi}^n_{_{RR,3}} \right\}_{n \in \mathbb{N}}$ seems to converge (as $n\to +\infty$) to the same limit as that of the sequence $\left\{ \bar{\psi}^n_{_{RR,2}} \right\}_{n \in \mathbb{N}}$ given by the single step RR extrapolation method (described in Section \ref{section: extrapolatedhyb} and equation \eqref{eq: RR.1}), namely
-\begin{equation}
-\label{eq: rr2samelimitrr3}
-	\lim_{n\to +\infty}\bar{\psi}^n_{_{RR,3}}(T)  = \lim_{n\to +\infty}\bar{\psi}^n_{_{RR,2}}(T),
-\end{equation} 
-which should be equal to $\psi(T)$ if the first order RR estimate (eq. \eqref{eq: 30inthepaper}) holds true. 
-This result (equation \eqref{eq: rr2samelimitrr3}) can observed from Table \ref{tavolarichardsonrombergtest1} and Figure \ref{comparisonComExtr} from which
+Now we compare the single step RR extrapolation (from which we obtain the sequence 
+$\left\{ \bar{\psi}^n_{_{RR,2}} \right\}_{n \in \mathbb{N}}$
+) with the double step RR extrapolation (from which we obtain the sequence 
+$\left\{ \bar{\psi}^n_{_{RR,3}} \right\}_{n \in \mathbb{N}}$
+) in terms of computation times\footnote{In seconds. We remind that we use a computer with the following properties: 12 CPUs i7-8750H  @ 2.20GHz. Even though the absolute times might change in different machines, we are more interested in ratios among different computation times.} and convergence rate (as $n\to +\infty$). 
+\\
+\\
+We can observe from Table \ref{tavolarichardsonrombergtest1} and Figure \ref{comparisonComExtr} the values of $\bar{\psi}^n_{_{RR,2}}(T)$ and $\bar{\psi}^n_{_{RR,3}}(T)$ (computed through equations \eqref{eq: multiStepRR} and \eqref{eq: RR.1}, respectively) and their relative computation times in seconds (the columns "comp. time RR2" and "comp. time RR3" of Table \ref{tavolarichardsonrombergtest1}). 
+\\
+\\
+We can notice that $\bar{\psi}^n_{_{RR,3}}(T)$ takes slightly more time than $\bar{\psi}^n_{_{RR,2}}(T)$ to be computed. This could have been expected. Indeed, reminding equations \eqref{eq: multiStepRR} and \eqref{eq: RR.1}, ....
+, it is clear that... This will surely be more visible with higher values of $n$.
+\textcolor{red}{ as we could have expected: we need to compute a more term: Riscrivi le formule.}
+\\
+\\
+However, $\bar{\psi}^n_{_{RR,3}}(T)\right\}$ seems to converge faster than $\bar{\psi}^n_{_{RR,2}}(T) \right\}$ (for $n \to +\infty$), as we can observe from Figure \ref{comparisonComExtr}. in function of $n$.
+\\
+\\
+So deciding whether to use one or the other is up to convenience: if we need fast convergence and we have no problems of powerful computers, then we can go for the RR3. If we need a quick computation and not a very precise estimate, we can go for RR2. 
+%\\ 
+%The numerical validity is given by the following argument:
+%the sequence of estimates $\left\{ \bar{\psi}^n_{_{RR,3}} \right\}_{n \in %\mathbb{N}}$ of $\psi$ seems to converge (as $n\to +\infty$) to the same %limit as that of the sequence $\left\{ \bar{\psi}^n_{_{RR,2}} \right\}_{n %\in \mathbb{N}}$ given by the single step RR extrapolation method
+%(described in Section \ref{section: extrapolatedhyb} and equation
+ %\eqref{eq: RR.1}), namely
+%\begin{equation}
+%\label{eq: rr2samelimitrr3}
+%	\lim_{n\to +\infty}\bar{\psi}^n_{_{RR,3}}(T)  = \lim_{n\to +\infty}%%% \bar{\psi}^n_{_{RR,2}}(T),
+%\end{equation} 
+%which should be equal to $\psi(T)$ if the first order RR estimate (eq. %\eqref{eq: 30inthepaper}) holds true. 
+%This result (equation \eqref{eq: rr2samelimitrr3}) can observed from Table \ref{tavolarichardsonrombergtest1} and Figure \ref{comparisonComExtr} from which we can observe the values of $\bar{\psi}^n_{_{RR,2}}(T)$ and $\bar{\psi}^n_{_{RR,3}}(T)$ computed through equations \eqref{eq: multiStepRR} and \eqref{eq: RR.1}. Moreover we have the computation times in the third and fourth column, where we can observe that $\bar{\psi}^n_{_{RR,3}}(T)$ takes slightly more time than $\bar{\psi}^n_{_{RR,2}}(T)$ to be computed. However, $\bar{\psi}^n_{_{RR,3}}(T)\right\}$ seems to converge faster than $\bar{\psi}^n_{_{RR,2}}(T) \right\}$ (for $n \to +\infty$), as we can observe from Figure \ref{comparisonComExtr}.
 
-Furthermore, we have also seen in Section \ref{section: computingc1} that the first order RR estimate in eq. \eqref{eq: 30inthepaper} seems to hold true numerically, meaning that the single step RR extrapolation is likely to be a good method in approximating $\psi(T)$. Namely, numerically it seems that holds
-\begin{equation}
-\label{eq: rr2topsi}
-	\lim_{n\to +\infty}\bar{\psi}^n_{_{RR,2}}(T) = \psi(T).
-\end{equation}  
-Therefore, by \eqref{eq: rr2topsi} and \eqref{eq: rr2samelimitrr3}, it follows that the double step RR extrapolation has a numerical validity.
-\textcolor{red}{fare test numerici per vedere se rr2 e rr3 di T valgono effettivamente come il metodo ibrido!}
-\\
-............
-\\
-Here it will be shown that the RR3 is not totally useless. Indeed, even if the estimate does not hold true, the following numercial experimentation suggests that $\bar{\psi}^n_{RR,3}$ converges to the same value of to which $\bar{\psi}^n_{RR,2}(T)$ converges to, and at a faster rate.
-\\
-\\
+
+\textcolor{red}{so, even if those RR estimate 2nd order does not hold true, the RR3 can be proven useful since it converges faster for $n$ but it takes slightly more time to be comouted. It is to be evaluated from time to time....}
+
+%Furthermore, we have also seen in Section \ref{section: computingc1} that the first order RR estimate in eq. \eqref{eq: 30inthepaper} seems to hold true numerically, meaning that the single step RR extrapolation is likely to be a good method in approximating $\psi(T)$. Namely, numerically it seems that holds
+%\begin{equation}
+%\label{eq: rr2topsi}
+%	\lim_{n\to +\infty}\bar{\psi}^n_{_{RR,2}}(T) = \psi(T).
+%\end{equation}  
+%Therefore, by \eqref{eq: rr2topsi} and \eqref{eq: rr2samelimitrr3}, it follows that the double step RR extrapolation has a numerical validity.
+%\textcolor{red}{fare test numerici per vedere se rr2 e rr3 di T valgono effettivamente come il metodo ibrido! Non servono ma mettili lo stesso i cosi numerici. Prova teoreticamente che RR2 e RR3 convergono effettivamente a psi di T...}
+%\\
+%............
+%\\
 We see it from the plot below. The tables also shows that the computational time for $RR3$ estimate is slightly higher than $RR,2$, but it converges faster than $RR,2$.
 
-
-\textcolor{red}{what to write.}
-Then final words on comp times. Do not plot the other plot like in the paper. Then this part is done.
 
 \begin{table}[ht]
 \caption{Richardson Romberg's estimates and computation times.}
 \centering
 \begin{tabular}{ |c|c|c|c|c| } 
  \hline
- $n$ & RR2 & RR3 & {\small comp. time RR2 (s)} & {\small comp. time RR3 (s)} \\
+ $n$ & $\bar{\psi}^n_{_{RR,2}}(T)$ & $\bar{\psi}^n_{_{RR,3}}(T)$ & {\small comp. time RR2 (s)} & {\small comp. time RR3  (s)} \\
  \hline
  32 & 766.229560 & 766.466877 & 0.005526 & 0.010074 \\ 
  \hline
