@@ -27,7 +27,7 @@
 \contentsline {subsection}{\numberline {3.3.1}Multistep extrapolated hybrid method}{38}%
 \contentsline {chapter}{\numberline {4}Numerical Test: Hybrid Euler scheme.}{41}%
 \contentsline {section}{\numberline {4.1}General Procedure}{41}%
-\contentsline {subsection}{\numberline {4.1.1}Real Results}{42}%
+\contentsline {subsection}{\numberline {4.1.1}Numerical Results}{42}%
 \contentsline {subsection}{\numberline {4.1.2}Computational Optimization and Observations}{45}%
 \contentsline {section}{\numberline {4.2}Computing $c_1$}{46}%
 \contentsline {subsection}{\numberline {4.2.1}Plots and validation of the RR estimates}{47}%

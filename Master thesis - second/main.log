@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.5.12)  11 JUN 2021 12:14
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.5.12)  11 JUN 2021 15:56
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1491,49 +1491,58 @@ or  <return>  to continue without it.
 ]
 Chapter 4.
 
-Underfull \hbox (badness 10000) in paragraph at lines 1353--1357
+Underfull \hbox (badness 10000) in paragraph at lines 1353--1355
+
+ []
+
+! Undefined control sequence.
+l.1371 ...et the parameters $\alpha,\lambda,\mu,\n
+                                                  , T$ and the accuracy meas...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1371--1392
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1370--1395
+Underfull \hbox (badness 10000) in paragraph at lines 1371--1392
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1370--1395
+Underfull \hbox (badness 10000) in paragraph at lines 1371--1392
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1370--1395
+Underfull \hbox (badness 10000) in paragraph at lines 1371--1392
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1370--1395
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1370--1395
+Underfull \hbox (badness 10000) in paragraph at lines 1371--1392
 
  []
 
 [41]
-Underfull \hbox (badness 10000) in paragraph at lines 1398--1408
+Underfull \hbox (badness 10000) in paragraph at lines 1395--1405
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1398--1408
+Underfull \hbox (badness 10000) in paragraph at lines 1395--1405
 
  []
 
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.1418  1 & 4.990864\cdot
+l.1415  1 & 4.990864\cdot
                           10^{4} & 41 & 2.525245 \cdot 10^{79} & 96 & $-7.18...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -1541,7 +1550,7 @@ you left one out. Proceed, with fingers crossed.
 ! Extra }, or forgotten $.
 <template> \unskip \hfil }
                           \hskip \tabcolsep \hskip -.5\arrayrulewidth \vrule...
-l.1418  1 & 4.990864\cdot 10^{4} &
+l.1415  1 & 4.990864\cdot 10^{4} &
                                    41 & 2.525245 \cdot 10^{79} & 96 & $-7.18...
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -1552,7 +1561,7 @@ deleted material, e.g., by typing `I$}'.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.1418  1 & 4.990864\cdot 10^{4} &
+l.1415  1 & 4.990864\cdot 10^{4} &
                                    41 & 2.525245 \cdot 10^{79} & 96 & $-7.18...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -1560,7 +1569,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.1418  1 & 4.990864\cdot 10^{4} &
+l.1415  1 & 4.990864\cdot 10^{4} &
                                    41 & 2.525245 \cdot 10^{79} & 96 & $-7.18...
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -1571,7 +1580,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.1418 ...990864\cdot 10^{4} & 41 & 2.525245 \cdot
+l.1415 ...990864\cdot 10^{4} & 41 & 2.525245 \cdot
                                                    10^{79} & 96 & $-7.183350...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -1579,7 +1588,7 @@ you left one out. Proceed, with fingers crossed.
 ! Extra }, or forgotten $.
 <template> \unskip \hfil }
                           \hskip \tabcolsep \hskip -.5\arrayrulewidth \vrule...
-l.1418 ...t 10^{4} & 41 & 2.525245 \cdot 10^{79} &
+l.1415 ...t 10^{4} & 41 & 2.525245 \cdot 10^{79} &
                                                    96 & $-7.183350 \cdot 10^...
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -1590,7 +1599,7 @@ deleted material, e.g., by typing `I$}'.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.1418 ...t 10^{4} & 41 & 2.525245 \cdot 10^{79} &
+l.1415 ...t 10^{4} & 41 & 2.525245 \cdot 10^{79} &
                                                    96 & $-7.183350 \cdot 10^...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -1598,7 +1607,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.1418 ...t 10^{4} & 41 & 2.525245 \cdot 10^{79} &
+l.1415 ...t 10^{4} & 41 & 2.525245 \cdot 10^{79} &
                                                    96 & $-7.183350 \cdot 10^...
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -1609,7 +1618,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.1420  2 &  -2.526168\cdot
+l.1417  2 &  -2.526168\cdot
                             10^{6} & 42 & -1.914071 \cdot 10^{81} & 97 & $5....
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -1617,7 +1626,7 @@ you left one out. Proceed, with fingers crossed.
 ! Extra }, or forgotten $.
 <template> \unskip \hfil }
                           \hskip \tabcolsep \hskip -.5\arrayrulewidth \vrule...
-l.1420  2 &  -2.526168\cdot 10^{6} &
+l.1417  2 &  -2.526168\cdot 10^{6} &
                                      42 & -1.914071 \cdot 10^{81} & 97 & $5....
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -1628,7 +1637,7 @@ deleted material, e.g., by typing `I$}'.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.1420  2 &  -2.526168\cdot 10^{6} &
+l.1417  2 &  -2.526168\cdot 10^{6} &
                                      42 & -1.914071 \cdot 10^{81} & 97 & $5....
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -1636,7 +1645,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.1420  2 &  -2.526168\cdot 10^{6} &
+l.1417  2 &  -2.526168\cdot 10^{6} &
                                      42 & -1.914071 \cdot 10^{81} & 97 & $5....
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -1647,7 +1656,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.1420 ...26168\cdot 10^{6} & 42 & -1.914071 \cdot
+l.1417 ...26168\cdot 10^{6} & 42 & -1.914071 \cdot
                                                    10^{81} & 97 & $5.471391 ...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -1655,7 +1664,7 @@ you left one out. Proceed, with fingers crossed.
 ! Extra }, or forgotten $.
 <template> \unskip \hfil }
                           \hskip \tabcolsep \hskip -.5\arrayrulewidth \vrule...
-l.1420 ... 10^{6} & 42 & -1.914071 \cdot 10^{81} &
+l.1417 ... 10^{6} & 42 & -1.914071 \cdot 10^{81} &
                                                    97 & $5.471391 \cdot 10^{...
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -1666,7 +1675,7 @@ deleted material, e.g., by typing `I$}'.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.1420 ... 10^{6} & 42 & -1.914071 \cdot 10^{81} &
+l.1417 ... 10^{6} & 42 & -1.914071 \cdot 10^{81} &
                                                    97 & $5.471391 \cdot 10^{...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -1674,7 +1683,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.1420 ... 10^{6} & 42 & -1.914071 \cdot 10^{81} &
+l.1417 ... 10^{6} & 42 & -1.914071 \cdot 10^{81} &
                                                    97 & $5.471391 \cdot 10^{...
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -1685,7 +1694,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.1422  3 &  1.711569\cdot
+l.1419  3 &  1.711569\cdot
                            10^{8} & 43 &  1.451107\cdot 10^{83} & 98 & $-4.1...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -1693,7 +1702,7 @@ you left one out. Proceed, with fingers crossed.
 ! Extra }, or forgotten $.
 <template> \unskip \hfil }
                           \hskip \tabcolsep \hskip -.5\arrayrulewidth \vrule...
-l.1422  3 &  1.711569\cdot 10^{8} &
+l.1419  3 &  1.711569\cdot 10^{8} &
                                     43 &  1.451107\cdot 10^{83} & 98 & $-4.1...
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -1704,7 +1713,7 @@ deleted material, e.g., by typing `I$}'.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.1422  3 &  1.711569\cdot 10^{8} &
+l.1419  3 &  1.711569\cdot 10^{8} &
                                     43 &  1.451107\cdot 10^{83} & 98 & $-4.1...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -1712,7 +1721,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.1422  3 &  1.711569\cdot 10^{8} &
+l.1419  3 &  1.711569\cdot 10^{8} &
                                     43 &  1.451107\cdot 10^{83} & 98 & $-4.1...
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -1723,7 +1732,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.1422 ...711569\cdot 10^{8} & 43 &  1.451107\cdot
+l.1419 ...711569\cdot 10^{8} & 43 &  1.451107\cdot
                                                    10^{83} & 98 & $-4.167590...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -1731,7 +1740,7 @@ you left one out. Proceed, with fingers crossed.
 ! Extra }, or forgotten $.
 <template> \unskip \hfil }
                           \hskip \tabcolsep \hskip -.5\arrayrulewidth \vrule...
-l.1422 ...t 10^{8} & 43 &  1.451107\cdot 10^{83} &
+l.1419 ...t 10^{8} & 43 &  1.451107\cdot 10^{83} &
                                                    98 & $-4.167590 \cdot 10^...
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -1742,7 +1751,7 @@ deleted material, e.g., by typing `I$}'.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.1422 ...t 10^{8} & 43 &  1.451107\cdot 10^{83} &
+l.1419 ...t 10^{8} & 43 &  1.451107\cdot 10^{83} &
                                                    98 & $-4.167590 \cdot 10^...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -1750,7 +1759,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.1422 ...t 10^{8} & 43 &  1.451107\cdot 10^{83} &
+l.1419 ...t 10^{8} & 43 &  1.451107\cdot 10^{83} &
                                                    98 & $-4.167590 \cdot 10^...
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -1761,7 +1770,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.1424  4 &  -1.175941\cdot
+l.1421  4 &  -1.175941\cdot
                             10^{10} & 44 & -1.100332\cdot 10^{85} & 99 & $3....
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -1769,7 +1778,7 @@ you left one out. Proceed, with fingers crossed.
 ! Extra }, or forgotten $.
 <template> \unskip \hfil }
                           \hskip \tabcolsep \hskip -.5\arrayrulewidth \vrule...
-l.1424  4 &  -1.175941\cdot 10^{10} &
+l.1421  4 &  -1.175941\cdot 10^{10} &
                                       44 & -1.100332\cdot 10^{85} & 99 & $3....
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -1780,7 +1789,7 @@ deleted material, e.g., by typing `I$}'.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.1424  4 &  -1.175941\cdot 10^{10} &
+l.1421  4 &  -1.175941\cdot 10^{10} &
                                       44 & -1.100332\cdot 10^{85} & 99 & $3....
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -1788,7 +1797,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.1424  4 &  -1.175941\cdot 10^{10} &
+l.1421  4 &  -1.175941\cdot 10^{10} &
                                       44 & -1.100332\cdot 10^{85} & 99 & $3....
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -1799,7 +1808,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.1424 ...75941\cdot 10^{10} & 44 & -1.100332\cdot
+l.1421 ...75941\cdot 10^{10} & 44 & -1.100332\cdot
                                                    10^{85} & 99 & $3.174595 ...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -1807,7 +1816,7 @@ you left one out. Proceed, with fingers crossed.
 ! Extra }, or forgotten $.
 <template> \unskip \hfil }
                           \hskip \tabcolsep \hskip -.5\arrayrulewidth \vrule...
-l.1424 ... 10^{10} & 44 & -1.100332\cdot 10^{85} &
+l.1421 ... 10^{10} & 44 & -1.100332\cdot 10^{85} &
                                                    99 & $3.174595 \cdot 10^{...
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -1818,7 +1827,7 @@ deleted material, e.g., by typing `I$}'.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.1424 ... 10^{10} & 44 & -1.100332\cdot 10^{85} &
+l.1421 ... 10^{10} & 44 & -1.100332\cdot 10^{85} &
                                                    99 & $3.174595 \cdot 10^{...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -1826,7 +1835,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.1424 ... 10^{10} & 44 & -1.100332\cdot 10^{85} &
+l.1421 ... 10^{10} & 44 & -1.100332\cdot 10^{85} &
                                                    99 & $3.174595 \cdot 10^{...
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -1837,7 +1846,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.1426  5 &  8.334470\cdot
+l.1423  5 &  8.334470\cdot
                            10^{11} & 45 & 8.345019\cdot 10^{86} & 100 & $-2....
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -1845,7 +1854,7 @@ you left one out. Proceed, with fingers crossed.
 ! Extra }, or forgotten $.
 <template> \unskip \hfil }
                           \hskip \tabcolsep \hskip -.5\arrayrulewidth \vrule...
-l.1426  5 &  8.334470\cdot 10^{11} &
+l.1423  5 &  8.334470\cdot 10^{11} &
                                      45 & 8.345019\cdot 10^{86} & 100 & $-2....
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -1856,7 +1865,7 @@ deleted material, e.g., by typing `I$}'.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.1426  5 &  8.334470\cdot 10^{11} &
+l.1423  5 &  8.334470\cdot 10^{11} &
                                      45 & 8.345019\cdot 10^{86} & 100 & $-2....
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -1864,7 +1873,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.1426  5 &  8.334470\cdot 10^{11} &
+l.1423  5 &  8.334470\cdot 10^{11} &
                                      45 & 8.345019\cdot 10^{86} & 100 & $-2....
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -1875,7 +1884,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.1426 ...334470\cdot 10^{11} & 45 & 8.345019\cdot
+l.1423 ...334470\cdot 10^{11} & 45 & 8.345019\cdot
                                                    10^{86} & 100 & $-2.41828...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -1883,7 +1892,7 @@ you left one out. Proceed, with fingers crossed.
 ! Extra }, or forgotten $.
 <template> \unskip \hfil }
                           \hskip \tabcolsep \hskip -.5\arrayrulewidth \vrule...
-l.1426 ...t 10^{11} & 45 & 8.345019\cdot 10^{86} &
+l.1423 ...t 10^{11} & 45 & 8.345019\cdot 10^{86} &
                                                    100 & $-2.418285 \cdot 10...
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -1894,7 +1903,7 @@ deleted material, e.g., by typing `I$}'.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.1426 ...t 10^{11} & 45 & 8.345019\cdot 10^{86} &
+l.1423 ...t 10^{11} & 45 & 8.345019\cdot 10^{86} &
                                                    100 & $-2.418285 \cdot 10...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -1902,7 +1911,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.1426 ...t 10^{11} & 45 & 8.345019\cdot 10^{86} &
+l.1423 ...t 10^{11} & 45 & 8.345019\cdot 10^{86} &
                                                    100 & $-2.418285 \cdot 10...
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -1913,7 +1922,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.1428  6 &  -5.981382\cdot
+l.1425  6 &  -5.981382\cdot
                             10^{13} & 46 & -6.330045\cdot 10^{88} & 101 & $1...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -1921,7 +1930,7 @@ you left one out. Proceed, with fingers crossed.
 ! Extra }, or forgotten $.
 <template> \unskip \hfil }
                           \hskip \tabcolsep \hskip -.5\arrayrulewidth \vrule...
-l.1428  6 &  -5.981382\cdot 10^{13} &
+l.1425  6 &  -5.981382\cdot 10^{13} &
                                       46 & -6.330045\cdot 10^{88} & 101 & $1...
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -1932,7 +1941,7 @@ deleted material, e.g., by typing `I$}'.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.1428  6 &  -5.981382\cdot 10^{13} &
+l.1425  6 &  -5.981382\cdot 10^{13} &
                                       46 & -6.330045\cdot 10^{88} & 101 & $1...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -1940,7 +1949,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.1428  6 &  -5.981382\cdot 10^{13} &
+l.1425  6 &  -5.981382\cdot 10^{13} &
                                       46 & -6.330045\cdot 10^{88} & 101 & $1...
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -1951,7 +1960,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.1428 ...81382\cdot 10^{13} & 46 & -6.330045\cdot
+l.1425 ...81382\cdot 10^{13} & 46 & -6.330045\cdot
                                                    10^{88} & 101 & $1.842222...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -1959,7 +1968,7 @@ you left one out. Proceed, with fingers crossed.
 ! Extra }, or forgotten $.
 <template> \unskip \hfil }
                           \hskip \tabcolsep \hskip -.5\arrayrulewidth \vrule...
-l.1428 ... 10^{13} & 46 & -6.330045\cdot 10^{88} &
+l.1425 ... 10^{13} & 46 & -6.330045\cdot 10^{88} &
                                                    101 & $1.842222 \cdot 10^...
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -1970,7 +1979,7 @@ deleted material, e.g., by typing `I$}'.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.1428 ... 10^{13} & 46 & -6.330045\cdot 10^{88} &
+l.1425 ... 10^{13} & 46 & -6.330045\cdot 10^{88} &
                                                    101 & $1.842222 \cdot 10^...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -1978,7 +1987,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.1428 ... 10^{13} & 46 & -6.330045\cdot 10^{88} &
+l.1425 ... 10^{13} & 46 & -6.330045\cdot 10^{88} &
                                                    101 & $1.842222 \cdot 10^...
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -1989,7 +1998,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.1430  7 &  4.336247\cdot
+l.1427  7 &  4.336247\cdot
                            10^{15} & 47 & 4.802405\cdot 10^{90} & 102 & $-1....
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -1997,7 +2006,7 @@ you left one out. Proceed, with fingers crossed.
 ! Extra }, or forgotten $.
 <template> \unskip \hfil }
                           \hskip \tabcolsep \hskip -.5\arrayrulewidth \vrule...
-l.1430  7 &  4.336247\cdot 10^{15} &
+l.1427  7 &  4.336247\cdot 10^{15} &
                                      47 & 4.802405\cdot 10^{90} & 102 & $-1....
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -2008,7 +2017,7 @@ deleted material, e.g., by typing `I$}'.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.1430  7 &  4.336247\cdot 10^{15} &
+l.1427  7 &  4.336247\cdot 10^{15} &
                                      47 & 4.802405\cdot 10^{90} & 102 & $-1....
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -2016,7 +2025,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.1430  7 &  4.336247\cdot 10^{15} &
+l.1427  7 &  4.336247\cdot 10^{15} &
                                      47 & 4.802405\cdot 10^{90} & 102 & $-1....
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -2027,7 +2036,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.1430 ...336247\cdot 10^{15} & 47 & 4.802405\cdot
+l.1427 ...336247\cdot 10^{15} & 47 & 4.802405\cdot
                                                    10^{90} & 102 & $-1.40343...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -2035,7 +2044,7 @@ you left one out. Proceed, with fingers crossed.
 ! Extra }, or forgotten $.
 <template> \unskip \hfil }
                           \hskip \tabcolsep \hskip -.5\arrayrulewidth \vrule...
-l.1430 ...t 10^{15} & 47 & 4.802405\cdot 10^{90} &
+l.1427 ...t 10^{15} & 47 & 4.802405\cdot 10^{90} &
                                                    102 & $-1.403434 \cdot 10...
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -2046,7 +2055,7 @@ deleted material, e.g., by typing `I$}'.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.1430 ...t 10^{15} & 47 & 4.802405\cdot 10^{90} &
+l.1427 ...t 10^{15} & 47 & 4.802405\cdot 10^{90} &
                                                    102 & $-1.403434 \cdot 10...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -2054,7 +2063,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.1430 ...t 10^{15} & 47 & 4.802405\cdot 10^{90} &
+l.1427 ...t 10^{15} & 47 & 4.802405\cdot 10^{90} &
                                                    102 & $-1.403434 \cdot 10...
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -2065,7 +2074,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.1432  8 &  -3.165401\cdot
+l.1429  8 &  -3.165401\cdot
                             10^{17} & 48 & - 3.644017\cdot 10^{92} & 103 & $...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -2073,7 +2082,7 @@ you left one out. Proceed, with fingers crossed.
 ! Extra }, or forgotten $.
 <template> \unskip \hfil }
                           \hskip \tabcolsep \hskip -.5\arrayrulewidth \vrule...
-l.1432  8 &  -3.165401\cdot 10^{17} &
+l.1429  8 &  -3.165401\cdot 10^{17} &
                                       48 & - 3.644017\cdot 10^{92} & 103 & $...
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -2084,7 +2093,7 @@ deleted material, e.g., by typing `I$}'.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.1432  8 &  -3.165401\cdot 10^{17} &
+l.1429  8 &  -3.165401\cdot 10^{17} &
                                       48 & - 3.644017\cdot 10^{92} & 103 & $...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -2092,7 +2101,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.1432  8 &  -3.165401\cdot 10^{17} &
+l.1429  8 &  -3.165401\cdot 10^{17} &
                                       48 & - 3.644017\cdot 10^{92} & 103 & $...
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -2103,7 +2112,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.1432 ...5401\cdot 10^{17} & 48 & - 3.644017\cdot
+l.1429 ...5401\cdot 10^{17} & 48 & - 3.644017\cdot
                                                    10^{92} & 103 & $1.069194...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -2111,7 +2120,7 @@ you left one out. Proceed, with fingers crossed.
 ! Extra }, or forgotten $.
 <template> \unskip \hfil }
                           \hskip \tabcolsep \hskip -.5\arrayrulewidth \vrule...
-l.1432 ...10^{17} & 48 & - 3.644017\cdot 10^{92} &
+l.1429 ...10^{17} & 48 & - 3.644017\cdot 10^{92} &
                                                    103 & $1.069194 \cdot 10^...
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -2122,7 +2131,7 @@ deleted material, e.g., by typing `I$}'.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.1432 ...10^{17} & 48 & - 3.644017\cdot 10^{92} &
+l.1429 ...10^{17} & 48 & - 3.644017\cdot 10^{92} &
                                                    103 & $1.069194 \cdot 10^...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -2130,7 +2139,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.1432 ...10^{17} & 48 & - 3.644017\cdot 10^{92} &
+l.1429 ...10^{17} & 48 & - 3.644017\cdot 10^{92} &
                                                    103 & $1.069194 \cdot 10^...
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -2141,7 +2150,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.1434  9 &  2.323151\cdot
+l.1431  9 &  2.323151\cdot
                            10^{19} & 49 & 2.765468\cdot 10^{94}& 104 & $-8.1...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -2149,7 +2158,7 @@ you left one out. Proceed, with fingers crossed.
 ! Extra }, or forgotten $.
 <template> \unskip \hfil }
                           \hskip \tabcolsep \hskip -.5\arrayrulewidth \vrule...
-l.1434  9 &  2.323151\cdot 10^{19} &
+l.1431  9 &  2.323151\cdot 10^{19} &
                                      49 & 2.765468\cdot 10^{94}& 104 & $-8.1...
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -2160,7 +2169,7 @@ deleted material, e.g., by typing `I$}'.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.1434  9 &  2.323151\cdot 10^{19} &
+l.1431  9 &  2.323151\cdot 10^{19} &
                                      49 & 2.765468\cdot 10^{94}& 104 & $-8.1...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -2168,7 +2177,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.1434  9 &  2.323151\cdot 10^{19} &
+l.1431  9 &  2.323151\cdot 10^{19} &
                                      49 & 2.765468\cdot 10^{94}& 104 & $-8.1...
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -2179,7 +2188,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.1434 ...323151\cdot 10^{19} & 49 & 2.765468\cdot
+l.1431 ...323151\cdot 10^{19} & 49 & 2.765468\cdot
                                                    10^{94}& 104 & $-8.145842...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -2187,7 +2196,7 @@ you left one out. Proceed, with fingers crossed.
 ! Extra }, or forgotten $.
 <template> \unskip \hfil }
                           \hskip \tabcolsep \hskip -.5\arrayrulewidth \vrule...
-l.1434 ...ot 10^{19} & 49 & 2.765468\cdot 10^{94}&
+l.1431 ...ot 10^{19} & 49 & 2.765468\cdot 10^{94}&
                                                    104 & $-8.145842 \cdot 10...
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -2198,7 +2207,7 @@ deleted material, e.g., by typing `I$}'.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.1434 ...ot 10^{19} & 49 & 2.765468\cdot 10^{94}&
+l.1431 ...ot 10^{19} & 49 & 2.765468\cdot 10^{94}&
                                                    104 & $-8.145842 \cdot 10...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -2206,7 +2215,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.1434 ...ot 10^{19} & 49 & 2.765468\cdot 10^{94}&
+l.1431 ...ot 10^{19} & 49 & 2.765468\cdot 10^{94}&
                                                    104 & $-8.145842 \cdot 10...
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -2217,13 +2226,10 @@ my insertion and my current dilemma will both disappear.
 <coefficients/logcoeff.png, id=166, 722.7pt x 433.62pt>
 File: coefficients/logcoeff.png Graphic file (type png)
 <use coefficients/logcoeff.png>
-Package pdftex.def Info: coefficients/logcoeff.png  used on input line 1458.
+Package pdftex.def Info: coefficients/logcoeff.png  used on input line 1455.
 (pdftex.def)             Requested size: 360.0pt x 216.00224pt.
-
-Underfull \vbox (badness 4713) has occurred while \output is active []
-
- [42]
-Underfull \hbox (badness 10000) in paragraph at lines 1471--1477
+[42]
+Underfull \hbox (badness 10000) in paragraph at lines 1468--1474
 
  []
 
@@ -2232,21 +2238,21 @@ Underfull \hbox (badness 10000) in paragraph at lines 1482--1487
 
  []
 
-<barpsin/n = 16.png, id=179, 939.51pt x 578.16pt>
+<barpsin/n = 16.png, id=181, 939.51pt x 578.16pt>
 File: barpsin/n = 16.png Graphic file (type png)
 <use barpsin/n = 16.png>
 Package pdftex.def Info: barpsin/n = 16.png  used on input line 1489.
-(pdftex.def)             Requested size: 359.99934pt x 170.71451pt.
-<barpsin/n = 64.png, id=180, 939.51pt x 578.16pt>
+(pdftex.def)             Requested size: 359.99934pt x 156.48462pt.
+<barpsin/n = 64.png, id=182, 939.51pt x 578.16pt>
 File: barpsin/n = 64.png Graphic file (type png)
 <use barpsin/n = 64.png>
 Package pdftex.def Info: barpsin/n = 64.png  used on input line 1494.
-(pdftex.def)             Requested size: 359.99934pt x 170.71451pt.
-<barpsin/n = 256.png, id=181, 939.51pt x 578.16pt>
+(pdftex.def)             Requested size: 359.99934pt x 156.48462pt.
+<barpsin/n = 256.png, id=183, 939.51pt x 578.16pt>
 File: barpsin/n = 256.png Graphic file (type png)
 <use barpsin/n = 256.png>
 Package pdftex.def Info: barpsin/n = 256.png  used on input line 1499.
-(pdftex.def)             Requested size: 359.99934pt x 170.71451pt.
+(pdftex.def)             Requested size: 359.99934pt x 156.48462pt.
 [44 <./barpsin/n = 16.png> <./barpsin/n = 64.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 1520--1522
 
@@ -2304,7 +2310,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1619--1621
 
  []
 
-<c1n/c_1^n.png, id=194, 939.51pt x 578.16pt>
+<c1n/c_1^n.png, id=196, 939.51pt x 578.16pt>
 File: c1n/c_1^n.png Graphic file (type png)
 <use c1n/c_1^n.png>
 Package pdftex.def Info: c1n/c_1^n.png  used on input line 1630.
@@ -2322,7 +2328,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1635--1639
 
  []
 
-<c1n/c_1log.png, id=198, 939.51pt x 578.16pt>
+<c1n/c_1log.png, id=200, 939.51pt x 578.16pt>
 File: c1n/c_1log.png Graphic file (type png)
 <use c1n/c_1log.png>
 Package pdftex.def Info: c1n/c_1log.png  used on input line 1643.
@@ -2333,7 +2339,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1680--1686
  []
 
 [49]
-<c1n/comp_times.png, id=208, 939.51pt x 578.16pt>
+<c1n/comp_times.png, id=210, 939.51pt x 578.16pt>
 File: c1n/comp_times.png Graphic file (type png)
 <use c1n/comp_times.png>
 Package pdftex.def Info: c1n/comp_times.png  used on input line 1700.
@@ -2358,7 +2364,7 @@ Overfull \hbox (8.23106pt too wide) in paragraph at lines 1740--1768
  [][] 
  []
 
-<extrapolated/extrapolated.png, id=214, 939.51pt x 578.16pt>
+<extrapolated/extrapolated.png, id=216, 939.51pt x 578.16pt>
 File: extrapolated/extrapolated.png Graphic file (type png)
 <use extrapolated/extrapolated.png>
 Package pdftex.def Info: extrapolated/extrapolated.png  used on input line 1777
@@ -3049,7 +3055,7 @@ With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
-<coefficients_test_2/output.png, id=218, 722.7pt x 433.62pt>
+<coefficients_test_2/output.png, id=220, 722.7pt x 433.62pt>
 File: coefficients_test_2/output.png Graphic file (type png)
 <use coefficients_test_2/output.png>
 Package pdftex.def Info: coefficients_test_2/output.png  used on input line 183
@@ -3059,7 +3065,7 @@ Package pdftex.def Info: coefficients_test_2/output.png  used on input line 183
 
 LaTeX Warning: Reference `fig:fBm11' on page 53 undefined on input line 1836.
 
-<coefficients_test_2/n = 16.png, id=223, 939.51pt x 578.16pt>
+<coefficients_test_2/n = 16.png, id=225, 939.51pt x 578.16pt>
 File: coefficients_test_2/n = 16.png Graphic file (type png)
 <use coefficients_test_2/n = 16.png>
 Package pdftex.def Info: coefficients_test_2/n = 16.png  used on input line 185
@@ -3069,13 +3075,13 @@ Package pdftex.def Info: coefficients_test_2/n = 16.png  used on input line 185
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [53 <./coefficients_test_2/output.png>]
-<coefficients_test_2/n = 64.png, id=228, 939.51pt x 578.16pt>
+<coefficients_test_2/n = 64.png, id=230, 939.51pt x 578.16pt>
 File: coefficients_test_2/n = 64.png Graphic file (type png)
 <use coefficients_test_2/n = 64.png>
 Package pdftex.def Info: coefficients_test_2/n = 64.png  used on input line 185
 5.
 (pdftex.def)             Requested size: 359.99934pt x 170.71451pt.
-<coefficients_test_2/n = 256.png, id=229, 939.51pt x 578.16pt>
+<coefficients_test_2/n = 256.png, id=231, 939.51pt x 578.16pt>
 File: coefficients_test_2/n = 256.png Graphic file (type png)
 <use coefficients_test_2/n = 256.png>
 Package pdftex.def Info: coefficients_test_2/n = 256.png  used on input line 18
@@ -3089,7 +3095,7 @@ Overfull \hbox (30.16846pt too wide) in paragraph at lines 1890--1920
  [][] 
  []
 
-<coefficients_test_2/c_1^n.png, id=235, 939.51pt x 578.16pt>
+<coefficients_test_2/c_1^n.png, id=237, 939.51pt x 578.16pt>
 File: coefficients_test_2/c_1^n.png Graphic file (type png)
 <use coefficients_test_2/c_1^n.png>
 Package pdftex.def Info: coefficients_test_2/c_1^n.png  used on input line 1925
@@ -3099,7 +3105,7 @@ Package pdftex.def Info: coefficients_test_2/c_1^n.png  used on input line 1925
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [55 <./coefficients_test_2/n = 256.png>]
-<coefficients_test_2/extrapolatedrr.png, id=241, 939.51pt x 578.16pt>
+<coefficients_test_2/extrapolatedrr.png, id=243, 939.51pt x 578.16pt>
 File: coefficients_test_2/extrapolatedrr.png Graphic file (type png)
 <use coefficients_test_2/extrapolatedrr.png>
 Package pdftex.def Info: coefficients_test_2/extrapolatedrr.png  used on input 
@@ -3117,7 +3123,7 @@ Chapter 5.
 [59] [60
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 2021--2022
+Underfull \hbox (badness 10000) in paragraph at lines 2023--2024
 []\OT1/cmr/m/n/10.95 Lalley P. Steven. \OT1/cmr/m/it/10.95 In-tro-duc-tion To G
 aus-sian Pro-cesses.
  []
@@ -3131,7 +3137,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.2069 \\
+l.2072 \\
          
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -3144,66 +3150,66 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.2070 \textbf
+l.2073 \textbf
               {Step 2.}
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-Overfull \hbox (14.4939pt too wide) in paragraph at lines 2077--2078
+Overfull \hbox (14.4939pt too wide) in paragraph at lines 2080--2081
 [][][][][][] 
  []
 
 
-Overfull \hbox (67.05444pt too wide) in paragraph at lines 2078--2079
+Overfull \hbox (67.05444pt too wide) in paragraph at lines 2081--2082
 [][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 [63
 
 ]
-Overfull \hbox (53.9143pt too wide) in paragraph at lines 2088--2089
+Overfull \hbox (53.9143pt too wide) in paragraph at lines 2091--2092
 [][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (60.48438pt too wide) in paragraph at lines 2089--2090
+Overfull \hbox (60.48438pt too wide) in paragraph at lines 2092--2093
 [][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (7.92383pt too wide) in paragraph at lines 2101--2102
+Overfull \hbox (7.92383pt too wide) in paragraph at lines 2104--2105
 [][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (40.77417pt too wide) in paragraph at lines 2102--2103
+Overfull \hbox (40.77417pt too wide) in paragraph at lines 2105--2106
 [][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (14.4939pt too wide) in paragraph at lines 2103--2104
+Overfull \hbox (14.4939pt too wide) in paragraph at lines 2106--2107
 [][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (7.92383pt too wide) in paragraph at lines 2108--2109
+Overfull \hbox (7.92383pt too wide) in paragraph at lines 2111--2112
 [][][][][][][][][] 
  []
 
 
-Overfull \hbox (86.76465pt too wide) in paragraph at lines 2111--2112
+Overfull \hbox (86.76465pt too wide) in paragraph at lines 2114--2115
 [][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (73.62451pt too wide) in paragraph at lines 2117--2119
+Overfull \hbox (73.62451pt too wide) in paragraph at lines 2120--2122
 [][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (60.48438pt too wide) in paragraph at lines 2121--2122
+Overfull \hbox (60.48438pt too wide) in paragraph at lines 2124--2125
 [][][][][][][][][] 
  []
 
@@ -3214,7 +3220,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.2124 
+l.2127 
        
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -3228,7 +3234,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.2137 \\
+l.2140 \\
          
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -3241,7 +3247,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.2138 \\
+l.2141 \\
          
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -3254,14 +3260,14 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.2139 \noindent
+l.2142 \noindent
                 
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-Overfull \hbox (14.4939pt too wide) in paragraph at lines 2143--2144
+Overfull \hbox (14.4939pt too wide) in paragraph at lines 2146--2147
 [][][][][][][][][][][][][][][][][][][][][][] 
  []
 
@@ -3272,87 +3278,87 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.2149 \noindent
+l.2152 \noindent
                 
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-Overfull \hbox (93.33472pt too wide) in paragraph at lines 2153--2154
+Overfull \hbox (93.33472pt too wide) in paragraph at lines 2156--2157
 [][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (139.3252pt too wide) in paragraph at lines 2174--2177
+Overfull \hbox (139.3252pt too wide) in paragraph at lines 2177--2180
 [][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (1.35376pt too wide) in paragraph at lines 2186--2187
+Overfull \hbox (1.35376pt too wide) in paragraph at lines 2189--2190
 [][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 [65]
-Overfull \hbox (1.35376pt too wide) in paragraph at lines 2190--2191
+Overfull \hbox (1.35376pt too wide) in paragraph at lines 2193--2194
 [][][][][][][][][][][] 
  []
 
 LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 2
-199.
+202.
 (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 2199.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 2202.
 
 
-Overfull \hbox (27.63403pt too wide) in paragraph at lines 2200--2201
+Overfull \hbox (27.63403pt too wide) in paragraph at lines 2203--2204
 [][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (1.35376pt too wide) in paragraph at lines 2210--2211
+Overfull \hbox (1.35376pt too wide) in paragraph at lines 2213--2214
 [][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (7.92383pt too wide) in paragraph at lines 2228--2229
+Overfull \hbox (7.92383pt too wide) in paragraph at lines 2231--2232
 [][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (80.19458pt too wide) in paragraph at lines 2230--2232
+Overfull \hbox (80.19458pt too wide) in paragraph at lines 2233--2235
 [][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (27.63403pt too wide) in paragraph at lines 2234--2235
+Overfull \hbox (27.63403pt too wide) in paragraph at lines 2237--2238
 [][][][][][][][][][][][][][][][][] 
  []
 
 [66]
-Overfull \hbox (7.92383pt too wide) in paragraph at lines 2248--2249
+Overfull \hbox (7.92383pt too wide) in paragraph at lines 2251--2252
 [][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (1.35376pt too wide) in paragraph at lines 2249--2250
+Overfull \hbox (1.35376pt too wide) in paragraph at lines 2252--2253
 [][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (73.62451pt too wide) in paragraph at lines 2255--2256
+Overfull \hbox (73.62451pt too wide) in paragraph at lines 2258--2259
 [][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (67.05444pt too wide) in paragraph at lines 2256--2257
+Overfull \hbox (67.05444pt too wide) in paragraph at lines 2259--2260
 [][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (27.63403pt too wide) in paragraph at lines 2257--2258
+Overfull \hbox (27.63403pt too wide) in paragraph at lines 2260--2261
 [][][][][][][][][][][][][][][] 
  []
 
@@ -3369,13 +3375,13 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 6153 strings out of 483140
- 89494 string characters out of 5965151
- 338113 words of memory out of 5000000
- 21052 multiletter control sequences out of 15000+600000
+ 6158 strings out of 483140
+ 89599 string characters out of 5965151
+ 338166 words of memory out of 5000000
+ 21057 multiletter control sequences out of 15000+600000
  552284 words of font info for 110 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 50i,12n,48p,704b,1578s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 50i,12n,48p,706b,1578s stack positions out of 5000i,500n,10000p,200000b,80000s
  </home/nicola/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1095.60
 0pk></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></
 usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/sh
@@ -3398,15 +3404,16 @@ onts/type1/public/amsfonts/cm/cmsl10.pfb></usr/share/texlive/texmf-dist/fonts/t
 ype1/public/amsfonts/cm/cmssbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1
 /public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
 c/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
-nts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
-cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12
-.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/euler/eusm10.pf
-b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb
->
-Output written on main.pdf (69 pages, 1331790 bytes).
+nts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.
+pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></
+usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/euler/eusm10.pfb></usr
+/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/
+share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
+Output written on main.pdf (69 pages, 1343777 bytes).
 PDF statistics:
- 380 PDF objects out of 1000 (max. 8388607)
- 240 compressed objects within 3 object streams
+ 388 PDF objects out of 1000 (max. 8388607)
+ 246 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
  96 words of extra memory for PDF output out of 10000 (max. 10000000)
 

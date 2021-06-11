@@ -1350,64 +1350,61 @@ In the next chapter we will see a practical sperimentation to get a hang of this
 
 \chapter{Numerical Test: Hybrid Euler scheme.}
 
-In this chapter we will run some numerical tests to get a feeling of how the Euler scheme works. For code refer to Appendix.
+In this chapter we will run some numerical tests to get a hold on the hybrid Euler scheme. For the code refer to Appendix \ref{appendix: hybridEulerScheme}.
 \\
-\\
-We will run our first experimentation with the following parameters (which are also found in real applications. See \cite{Main}):
+
+We will use with the following parameters (which are also found in real applications, see \cite{Main}):
 
 \begin{equation}
     \label{eq: NumericalTestParameters}
     \alpha = 0.64, \hspace{0.2cm} \lambda = 0.045, \hspace{0.2cm}\mu = -64.938, \hspace{0.2cm} \nu = 44850.
 \end{equation}
 %The precision set to $\epsilon_0 = 0.01$, and $T=\frac{1}{252}$.
-Note that to $\alpha=0.64$ corresponds $H=\alpha - \frac{1}{2}= 0.14$, which contains the rough behaviour of the fractional Brownian motion. 
-\\
-We will consider $\psi: \mathbb{R}_+ \to \mathbb{R} $.
+Note that to $\alpha=0.64$ corresponds to $H=\alpha - \frac{1}{2}= 0.14$, which produces the rough behaviour of the fractional Brownian motion. 
+
+We will consider $\psi$, the solution to the Riccati differential equation $\mathcal{E}^0_{\lambda, \mu, \nu}$ (eq. \eqref{eq: fractionalRiccati}) restricted to the real positive axis instead of all $\mathbb{R}$, i.e., $$\psi: \mathbb{R}_+ \to \mathbb{R}.$$
+Let us see the general procedure of the hybrid Euler scheme.
 
 \section{General Procedure} 
 \label{section: generalprocedure}
 
-Let $n$ be fixed. The general procedure to compute $\bar{\psi}^n(T)$ (hybrid Euler discretization), after having set the parameters $\alpha,\lambda,\mu,\nu, \epsilon_0$ and $T$,  consists of the following steps:
+Let $n$ be fixed. The general procedure to compute $\bar{\psi}^n(T)$ (the $n$-th Euler discretization), after having set the parameters $\alpha,\lambda,\mu,\n, T$ and the accuracy measure $\epsilon_0$, consists of the following steps:
 \\
 \\
-1) Set $r_{max}$ (for example 100) and $\theta$ (usually 0.9) 
+1) Fix $r_{max}$ (we will use $r_{max}=105$) and $\theta$ (usually 0.9)
 \footnote{We set $\theta$ fixed and indipendent by $n$ in our tests. Moreover, due to machines' limitations, we set $r_{max}$ to be at most $110$ in our experimentations.}.
 \\
 \\
 2) [\textit{Fractional Power Series.}]
+Compute the coefficients $a_k$ ($k\in \mathbb{N}$) of the fractional power series $\psi(t) = \sum_{k\ge 1}^\infty a_k t^{k\alpha}$ up to $r_{max}$, using the recursive relation $(A_{\lambda, \mu, \nu})$ (recall \eqref{eq: recurrent1}). Therefore, in place of $\psi(t) = \sum_{k\ge 1}^\infty a_k t^{k\alpha}$, we will consider $\psi^{tr}(t) = \sum_{k\ge 1}^{r_{max}} a_k t^{k\alpha}.$
 \\
-Compute the coefficients $a_k$ ($k\in \mathbb{N}$) of the fractional power series $\psi(t) = \sum_{k\ge 1}^\infty a_k t^{k\alpha}$ up to $r_{max}$, using the recursive relation $(A_{\lambda, \mu, \nu})$ (see \eqref{eq: recurrent1}).
 \\
-\\
-3) [\textit{Estimating The Convergence Radius}]
-\\
+3) [\textit{Estimating The Convergence Radius.}]
 Knowing the coefficient $a_{r_{max}}$ allows us to use formula \eqref{eq: estimateRadiusAnother} to estimate the convergence radius $\widehat{R}_\psi$.
 \\
 \\
-4) [\textit{Truncation}]
-\\
-Truncate the coefficients up to $a_{r_0}$, with $r_0$ computed through the formula \eqref{eq: accuracyTruncation}.
+4) [\textit{Truncation.}]
+Truncate the coefficients up to $a_{r_0}$, with $r_0$ computed through formula \eqref{eq: accuracyTruncation}.
 \\
 \\
 5) [\textit{Compute $\bar{\psi}^n(t_k)$ for $k=0,\cdots, n$.}]
-\\
 For $n\in \mathbb{N}$ fixed, compute $\bar{\psi}^n(t_k)$ for $k=0,\cdots,n$ in the following way: use the fractional power series for $k=0,\cdots, k_0$, where {\small $k_0 = \left \lfloor\frac{n\theta \widehat{R}_\psi}{T} \right\rfloor.$} Use the recursive formula \eqref{eq: 28inthepaper} for $k = k_0+1, \cdots, n$. Note that if $\theta \widehat{R}_\psi >T$ there is no need to use \eqref{eq: 28inthepaper}.
 
-\subsection{Real Results}
+\subsection{Numerical Results}
 
 We ran a test with the parameters \eqref{eq: NumericalTestParameters}, the precision set to $\epsilon_0 = 0.01$
-and $T=\frac{1}{252}$. The first $4$ steps are indipendent from $n$, so that the procedure in these steps is the same when computing $\bar{\psi}^n(t_k)$ for any $n$ positive integer.
+and $T=\frac{1}{252}$. The first $4$ steps are indipendent of $n$, so that the procedure in these steps is the same when computing $\bar{\psi}^n(t_k)$ for any $n$ positive integer.
 \\
 \\
-\textbf{For step 1.} We chose $r_{max}=105$ and $\theta = 0.9$. 
+\textbf{Step 1.} We chose $r_{max}=105$ and $\theta = 0.9$. The choice of $r_{max}$ being due to machine's limitations (the absolute values of the coefficients grow very fast as we can see from Figure \ref{barbaz}). 
 \\
 \\
-\textbf{For step 2.} the coefficients were computed up to the $r_{max}$-th coefficient. 
-In this particular case, the modulo of the coefficients is increasing rapidly. 
+\textbf{Step 2.} The coefficients were computed up to the $r_{max}$-th coefficient. 
+In this particular case, the absolute value of the coefficients is increasing rapidly. 
 In Table \ref{tavola1coefficienti} are displayed some of the coefficients that we found numerically through the recursive relation $(A_{\lambda, \mu, \nu})$ (eq. \eqref{eq: recurrent1}).
 
 \begin{table}[ht]
-\caption{coefficients of the fractional power series.}
+\caption{coefficients $\left\{ a_k \right\}_{k \in \mathbb{N}}$ of the fractional power series $\psi(t) = \sum_{k=0}^\infty a_k t^{k\alpha}$.}
 \centering
 \begin{tabular}{ |c|c| |c|c| |c|c| } 
  \hline
@@ -1451,7 +1448,7 @@ In Table \ref{tavola1coefficienti} are displayed some of the coefficients that w
 %\end{figure}
 
 \noindent
-The growth of the coefficients $\left\{ a_k\right\}_{k\in\mathbb{N}}$ is exponential, confirmed by the plot of $f(k) = \log(|a_k|)$ in Figure \ref{barbaz}.
+The growth of the absolute values of the coefficients $\left\{ |a_k|\right\}_{k\in\mathbb{N}}$ is exponential, confirmed by the plot of $f(k) = \log(|a_k|)$ in Figure \ref{barbaz}.
 
 
 \begin{figure}[H]
@@ -1460,8 +1457,8 @@ The growth of the coefficients $\left\{ a_k\right\}_{k\in\mathbb{N}}$ is exponen
 \end{figure}
 
 \noindent
-\textbf{For step 3.}
-The estimated convergence radius is $\widehat{R}_\psi = 0.00109$ (the result is rounded), computed with the knowledge of $a_{r_{max}} = a_{105} = 6.21\cdot 10^{199}$ and the formula \eqref{eq: estimateRadiusAnother}:
+\textbf{Step 3.}
+The estimated convergence radius evaluated via \eqref{eq: estimateRadiusAnother} is $\widehat{R}_\psi = 0.00109$ (the result is rounded), computed with the knowledge of $a_{r_{max}} = a_{105} = 6.21\cdot 10^{199}$ and the formula \eqref{eq: estimateRadiusAnother}:
 
 $$\widehat{R}_\psi = |a'_{r_{max}}|^ {-\frac{1}{\alpha r_{max}}} = |a'_{105}|^ {-\frac{1}{\alpha \cdot 105}}  = 0.00109,$$
 \noindent
@@ -1472,32 +1469,35 @@ Note that $\widehat{R}_\psi < \frac{1}{252}= T \approx 0.004$ so that $$\theta \
 Thus we will use the hybrid approach, as $T$ does not belong to the domain of absolute convergence of the fractioanl power series: the fractional power series is used up to $\theta \widehat{R}_\psi$, after which the Euler scheme is applied in order to compute the values $\bar{\psi}^n(t_k)$, $k=0,1,\cdots,n$.
 \\
 \\
-\textbf{For step 4.}
-Using formula \eqref{eq: accuracyTruncation} returns $r_0 = 102$. This means that in order to achieve an accuracy of $\epsilon_0 = 0.01$ with the fractional power series for $t\in [0,\theta \widehat{R}_\psi)$, it is enough to truncate up to $a_{102}$: thus we will consider the truncated series 
-$$ \psi(t) = \sum_{k=0}^{102} a_k t^{k\alpha}. $$
+\textbf{Step 4.}
+Formula \eqref{eq: accuracyTruncation} gives us $r_0 = 102$. This means that in order to achieve an accuracy of $\epsilon_0 = 0.01$ with the fractional power series for $t\in [0,\theta \widehat{R}_\psi)$, it is enough to truncate at $a_{102}$: thus we will consider the truncated series 
+\begin{equation}
+\label{eq: truncated series n step4}
+\psi^{tr}(t) = \sum_{k=0}^{102} a_k t^{k\alpha}. 
+\end{equation} 
 \\
-\textbf{For step 5.}
+\textbf{Step 5.}
 Fix $n$ positive integer. In order to determine $\bar{\psi}^n(t)$ for any $t\in [0,T]$, is necessary and sufficient to determine the values $\bar{\psi}^n(t_k)$ for $k=1,\cdots ,n$ ($t_k$ and $k_0$ defined in \eqref{eq: tk and k0}), since $\bar{\psi}^n$ is a piecewise step function.
 For $ t_0, t_1, \cdots, t_{k_0}$ the fractional power series is used, i.e., we set 
 $$\bar{\psi}^n(t_k) = \sum_{n=0}^{102} a_n t_k^n, \hspace{0.4cm} k=0,\cdots, k_0.$$
 While for $t_{k_0+1}, \cdots, t_n$, the recurrent formula \eqref{eq: 28inthepaper} based on the Euler scheme is used. 
 \\
 \\
-Here we display some plots of $\bar{\psi}^n$ for different values of $n$ ($n=16,64,256$).
+In Figure \ref{fig: psi n=16}, \ref{fig: psi n=64} and \ref{fig: psi n=256} we display some plots of $\bar{\psi}^n$ for different values of $n$ ($n=16,64,256$, respectively).
 
 \begin{figure}[H]
-  \includegraphics[width=\textwidth, height= 60mm]{barpsin/n = 16.png}
-  \caption{(a) $n = 16$}
+  \includegraphics[width=\textwidth, height= 55mm]{barpsin/n = 16.png}
+  \caption{(a) curve of $\bar{\psi}^{16}(t)$.} \label{fig: psi n=16}
 \end{figure}
 
 \begin{figure}[H]
-  \includegraphics[width=\textwidth, height= 60mm]{barpsin/n = 64.png}
-  \caption{(b) $n = 64$}
+  \includegraphics[width=\textwidth, height= 55mm]{barpsin/n = 64.png}
+  \caption{(b) curve of $\bar{\psi}^{64}(t)$.} \label{fig: psi n=64}
 \end{figure}
 
 \begin{figure}[H]
-  \includegraphics[width=\textwidth, height= 60mm]{barpsin/n = 256.png}
-  \caption{(c) $n = 256$}
+  \includegraphics[width=\textwidth, height= 55mm]{barpsin/n = 256.png}
+  \caption{(c) curve of $\bar{\psi}^{256}(t)$.} \label{fig: psi n=256}
 \end{figure}
 
 
@@ -1513,7 +1513,7 @@ Here we display some plots of $\bar{\psi}^n$ for different values of $n$ ($n=16,
 %\caption{$\bar{\psi}^n$ plots} \label{fig:fBm11}
 %\end{figure}
 
-Each point represents the value of $\bar{\psi}^n(t_l)$ for $l\in \left\{ 1,2,\cdots, n\right\}$. The red line is the value of $t_{k_0}$, which is the threshold that separates the methods we applied in order to compute the values of $\bar{\psi}^n(t_l)$, $l\in \left\{ 1,2,\cdots, n\right\}$: the fractional power series is applied with the points on the left-side of the threshold $t_{k_0}$ (i.e., for $t_0, t_1 \cdots, t_{k_0}$), and the Euler scheme with those on the right-side (i.e., for $t_{k_0+1}, \cdots, t_n$).
+In Figure \ref{fig: psi n=256}, \ref{fig: psi n=64} and \ref{fig: psi n=16}, where we plotted some $\bar{\psi}^n$ for different values of $n$ ($n=16,64,256$), each point represents the value of $\bar{\psi}^n(t_l)$ for $l\in \left\{ 1,2,\cdots, n\right\}$. The red line is the value of $t_{k_0}$, which is the threshold that separates the methods we applied in order to compute the values of $\bar{\psi}^n(t_l)$, $l\in \left\{ 1,2,\cdots, n\right\}$: the fractional power series is applied with the points on the left-side of the threshold $t_{k_0}$ (i.e., for $t_0, t_1 \cdots, t_{k_0}$), and the Euler scheme with those on the right-side (i.e., for $t_{k_0+1}, \cdots, t_n$).
 \\
 Notice that the transition from the evaluation of the power series to the Euler scheme is ``smooth", even though we applied two different techniques. This suggests that the hybrid approach is consistent. 
 
@@ -1982,6 +1982,8 @@ And just discuss that computational times are similar behaviour.
 
 \chapter{Other Plus final comments}
 
+
+
 \textcolor{red}{ What is left to do? precedentemente non abbiamo parlato dei tempi compitazionali di psi n. Per poi confrontare con machine learning forse. dove n può essere il numero di neuroni. }
 
 \section{Forse aggiungerà la parte di machine learning se andrò in russia.}
@@ -2047,6 +2049,7 @@ complexity.} Monte Carlo Methods and Applications Journal, 13(1):37–70 (2007).
 \appendix 
 
 \chapter{Python Code: Hybrid Euler Scheme}
+\label{appendix: hybridEulerScheme}
 
 \section{Computing $\left\{ \bar{\psi}^n\right\}_{n\in \mathbb{N}}$.}
 \noindent
