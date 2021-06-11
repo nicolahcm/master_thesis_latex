@@ -30,7 +30,7 @@
 \contentsline {subsection}{\numberline {4.1.1}Real Results}{42}%
 \contentsline {subsection}{\numberline {4.1.2}Computational Optimization and Observations}{45}%
 \contentsline {section}{\numberline {4.2}Computing $c_1$}{46}%
-\contentsline {subsection}{\numberline {4.2.1}Plots and confirmation of the RR estimates}{47}%
+\contentsline {subsection}{\numberline {4.2.1}Plots and validation of the RR estimates}{47}%
 \contentsline {subsection}{\numberline {4.2.2}Computational times for the sequence $\left \{ \bar {c}_1^n \right \}_{n\in \mathbb {N}}$.}{50}%
 \contentsline {section}{\numberline {4.3}Richardson-Romberg's extrapolations.}{50}%
 \contentsline {section}{\numberline {4.4}Another Test with different parameters}{52}%
