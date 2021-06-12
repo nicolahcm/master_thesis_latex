@@ -2,6 +2,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage{amsmath, amssymb, eucal, latexsym, multicol, amsthm, mathrsfs} 
 \usepackage[toc,page]{appendix}
+\usepackage{subcaption}
 \usepackage{graphicx}
 \usepackage{indentfirst}
 \usepackage{float}
@@ -1411,7 +1412,6 @@ In this particular case, the absolute value of the coefficients is increasing ra
 In Table \ref{tavola1coefficienti} are displayed some of the coefficients that we found numerically through the recursive relation $(A_{\lambda, \mu, \nu})$ (eq. \eqref{eq: recurrent1}).
 
 \begin{table}[ht]
-\caption{coefficients $\left\{ a_k \right\}_{k \in \mathbb{N}}$ of the fractional power series $\psi(t) = \sum_{k=0}^\infty a_k t^{k\alpha}$.}
 \centering
 \begin{tabular}{ |c|c| |c|c| |c|c| } 
  \hline
@@ -1438,28 +1438,17 @@ In Table \ref{tavola1coefficienti} are displayed some of the coefficients that w
  9 &  2.323151\cdot 10^{19} & 49 & 2.765468\cdot 10^{94}& 104 & $-8.145842 \cdot 10^{197}$\\
  \hline
 \end{tabular}
+\caption{coefficients $\left\{ a_k \right\}_{k \in \mathbb{N}}$ of the fractional power series $\psi(t) = \sum_{k=0}^\infty a_k t^{k\alpha}$.}
 \label{tavola1coefficienti}
 \end{table}
 
-
-%\begin{figure}[htp]
-%
-%\centering
-%\includegraphics[width=.3\textwidth]{coefficients/a1.png}\hfill
-%\includegraphics[width=.3\textwidth]{coefficients/a2.png}\hfill
-%\includegraphics[width=.3\textwidth]{coefficients/a3.png}
-%
-%\caption{coefficients}
-%\label{fig:figureCoefficients}
-%
-%\end{figure}
 
 \noindent
 The growth of the absolute values of the coefficients $\left\{ |a_k|\right\}_{k\in\mathbb{N}}$ is exponential, confirmed by Figure \ref{barbaz} where is plotted the curve $f(k): = \log(|a_k|)$ for $k=0,1,\cdots, 105$.
 
 
 \begin{figure}[H]
-  \includegraphics[width=\textwidth]{coefficients/logcoeff.png}
+  \includegraphics[width=\textwidth, height=60mm]{coefficients/logcoeff.png}
   \caption{plot of the curve $f(k) = \log(|a_k|)$, $k=0,1,\cdots,105$, confirming the exponential growth of the absolute values of the coefficients $\left\{|a_k|\right\}_{k\in\mathbb{N}} $ of $\psi(t) = \sum_{k=0}^\infty a_kt^{k\alpha}$.}
 \label{barbaz}
 \end{figure}
@@ -1493,7 +1482,7 @@ While for $t_{k_0+1}, \cdots, t_n$, the recurrent formula \eqref{eq: 28inthepape
 In Figure \ref{fig: psi n=16}, \ref{fig: psi n=64} and \ref{fig: psi n=256} we display some plots of $\bar{\psi}^n$ for different values of $n$ ($n=16,64,256$, respectively).
 
 \begin{figure}[H]
-  \includegraphics[width=\textwidth, height= 55mm]{barpsin/n = 16.png}
+  \includegraphics[width=\textwidth, height=55mm]{barpsin/n = 16.png}
   \caption{(a) curve of $\bar{\psi}^{16}(t)$ evaluated at $t=t_0,t_1,\cdots t_{16}$.} \label{fig: psi n=16}
 \end{figure}
 
@@ -1559,7 +1548,7 @@ for $32 \le n \le 4096$.
 Notice that the function $\theta(n)$ defined above is increasing, reaching a maximum of $0.925$. 
 However, for values of $n\approx 2000$ we already have $\theta(n) \approx 0.9$, and preferably we would like to have greater values of $n$ for a better accuracy. Moreover, for such values of $n$ the computational cost is still very low for the machine (under one minute of computation for $\bar{\psi}^n$, $n\le 4000$, in this particular test with a machine with the properties described in \eqref{eq: ref properties pc}). This is why in our experimentations we set $\theta=0.9$ fixed independent by $n$.
 
-\section{Computing $c_1$}
+\section{Computing $c_1$.}
 \label{section: computingc1}
 
 In this section we continue the numerical tests, using the same parameters given in equation \eqref{eq: NumericalTestParameters} and $T=\frac{1}{252}$ with precision set to $\epsilon_0 = 0.01$. 
@@ -1573,7 +1562,6 @@ We also have the column with the computation time in seconds for each $\bar{c}_1
 Furthermore, there is the ratio of consecutive computation times: if we denote by $C(\bar{c}_1^n)$ the computation time in seconds required to evaluate $\bar{c}_1^n$, then the column "ratio of consecutive computation times" is $\frac{C(\bar{c}_1^n)}{C(\bar{c}_1^{n/2})}$.
 
 \begin{table}[ht]
-\caption{evaluations of $\bar{c_1}^n$ (defined in equation \eqref{eq: 32inthepaper}) and computation times.}
 \centering
 \begin{tabular}{ |c|c|c|c| } 
  \hline
@@ -1612,6 +1600,7 @@ Furthermore, there is the ratio of consecutive computation times: if we denote b
  131072 & 196.510382 & 14858.320412 & 4.029150 \\
  \hline
 \end{tabular}
+\caption{evaluations of $\bar{c_1}^n$ (defined in equation \eqref{eq: 32inthepaper}) and computation times.}
 \label{c1table}
 \end{table}
 
@@ -1632,14 +1621,20 @@ In the next Subsection \ref{subsection: plots and confirm rr estimate} we will s
 \subsection{Plots and validation of the RR estimates.}
 \label{subsection: plots and confirm rr estimate}
 
-Figure \ref{c1plot1} shows $\bar{c_1}^n$ as a function of $n$ (for numerical values see Table \ref{c1table}).
+Figure \ref{c1plot1} and \ref{c1plot1v2} show $\bar{c_1}^n$ as a function of $n$ (for numerical values see Table \ref{c1table}).
 
 \begin{figure}[h]
-  \includegraphics[width=10.5cm]{c1n/c_1^n.png}
+  \includegraphics[width=\textwidth, height=55mm]{c1n/c_1^n.png}
   \caption{we plot $\bar{c}_1^n$ as a function of $n$: $f(n):=\bar{c}_1^n $.}\label{c1plot1}
 \end{figure}
 
-From the plot in Figure \ref{c1plot1} it is more evident that the sequence $\left\{\bar{c}_1^n \right\}_{n\in\mathbb{N}}$ converges.
+\begin{figure}[h]
+  \includegraphics[width=\textwidth, height=55mm]{c1n/c_1^n_zoomed.png}
+  \caption{the same plot as Figure \ref{c1plot1} ($\bar{c}_1^n$ as a function of $n$: $f(n):=\bar{c}_1^n$) but zoomed on the $y$-axis.}\label{c1plot1v2}
+\end{figure}
+
+
+From the plot in Figure \ref{c1plot1} (and \ref{c1plot1v2}) it is more evident that the sequence $\left\{\bar{c}_1^n \right\}_{n\in\mathbb{N}}$ converges.
 If the RR estimate \eqref{eq: 30inthepaper} holds, then a necessary condition is that $$\lim_{n\to +\infty}\bar{c_1}^n  = c_1,$$ as shown in \eqref{eq: 32inthepaper}. 
 However, this is not a sufficient condition for the RR estimate to hold.
 \\
@@ -1647,7 +1642,7 @@ However, this is not a sufficient condition for the RR estimate to hold.
 Now, the plot in Figure \ref{c1plotlog} shows  $\log(\bar{c_1}^n-\bar{c_1}^{ref})$ as a function of $\log(n)$.
 
 \begin{figure}[h]
-  \includegraphics[width=11.5cm]{c1n/c_1log.png}
+  \includegraphics[width=\textwidth, height=55mm]{c1n/c_1log.png}
   \caption{$\log(\bar{c_1}^n-\bar{c_1}^{ref})$ vs $\log(n)$. }\label{c1plotlog}
 \end{figure}
 
@@ -1670,7 +1665,7 @@ we would have that (considering $c_1 \approx c_1^{ref}$)
     \end{aligned}
 \end{equation}
 \noindent
-and therefore
+and therefore (where by $\approx$ we mean ``approximately equal" from a non-rigorous mathematical point of view)
 
 \begin{equation}
     \log(\bar{c_1}^n- c_1^{ref}) \approx \log(\frac{3c_2}{n}) = C - \log(n).
@@ -1681,17 +1676,19 @@ This tells us that the second order RR estimate might not be true, suggesting an
     \label{eq: estimateRRwithbeta}
     \bar{\psi}^n(T) - \bar{\psi}(T) = \frac{c_1}{n} + \frac{c_2}{n^{2-\beta}} + o(n^{\beta-2}),
 \end{equation}
-where $\beta \in (0,1)$ might depend on $\lambda, \mu, \nu$. Performing similar computations as in \eqref{eq: compWitBetaLog}, yields to 
+where $\beta \in (0,1)$ might depend on $\lambda, \mu, \nu$. 
+Performing similar computations as in \eqref{eq: compWitBetaLog}, yields to 
 \begin{equation}
      \log(\bar{c_1}^n- c_1^{ref}) \approx C - (1-\beta) \log(n).
 \end{equation}
 \noindent
 In our particular case it would be $(1-\beta) = -0.6838$, namely $\beta \approx -0.32$. 
 \\
-However, in all of this, it is noted in \cite{Main} (in Section $4.5$) that the regression coefficient changes as we consider wider ranges of values for $n$.
+However, in all of this, it is noted in \cite{Main} (in Section $4.5$) that the regression coefficient changes as we consider wider ranges of values for $n$ (we are not able to verify this due to limited computation power: for $n=2^{17}$, the evaluation of $\bar{c}_1^n$ already takes four hours).
 \\
 
-These observations suggest that the RR estimate of second order (eq. \eqref{eq: moreAccurateEstimate}) and the estimate in equation \eqref{eq: estimateRRwithbeta} do not hold true. However, all this does not imply that the double step RR extrapolation (described in Subsection \ref{subsection: multiStepRR} and equation \eqref{eq: multiStepRR}) is useless: we remind that $\left\{ \bar{\psi}^n_{_{RR,3}} \right\}_{n \in \mathbb{N}}$ does converge to $\psi$ (as $n\to +\infty$), but the convergence rate \eqref{eq: rr3 convergence rate} might not hold true since the second order RR estimate \eqref{eq: moreAccurateEstimate}, from which it follows, seems not to hold. 
+These observations suggest that the RR estimate of second order (eq. \eqref{eq: moreAccurateEstimate}) and the estimate in equation \eqref{eq: estimateRRwithbeta} do not hold true.
+ However, all this does not imply that the double step RR extrapolation (described in Subsection \ref{subsection: multiStepRR} and equation \eqref{eq: multiStepRR}) is useless: we remind that $\left\{ \bar{\psi}^n_{_{RR,3}} \right\}_{n \in \mathbb{N}}$ does converge to $\psi$ (as $n\to +\infty$), but the convergence rate \eqref{eq: rr3 convergence rate} might not hold true since the second order RR estimate \eqref{eq: moreAccurateEstimate}, from which it follows, seems not to hold. 
 \\
 Below in Section \ref{section: confirmingRR3} we will compare the computation times between the single step RR extrapolation method and the double step (i.e., computation times in seconds of $\left\{ \bar{\psi}^n_{_{RR,2}} \right\}_{n \in \mathbb{N}}$ and $\left\{ \bar{\psi}^n_{_{RR,3}} \right\}_{n \in \mathbb{N}}$, respectively, for some values of $n$) and the convergence rate in function of $n$.
 
@@ -1704,7 +1701,7 @@ From Table \ref{c1table} we can observe that the computation time of $\left\{ \b
 In Figure \ref{comptimes} is presented the plot of $\log$(computation time of $\bar{c}_1^n$) vs $\log(n)$.
 
 \begin{figure}[H]
-  \includegraphics[width=\textwidth]{c1n/comp_times.png}
+  \includegraphics[width=\textwidth, height=65mm]{c1n/comp_times.png}
   \caption{$\log$(computation time of $\bar{c}_1^n$) vs $\log(n)$.}\label{comptimes}
 \end{figure}
 
@@ -1738,11 +1735,11 @@ Both curves converge to the same value, as we already know (recall Remark \ref{r
 \\
 
 Finally, deciding whether to use $\left\{ \bar{\psi}^n_{_{RR,3}}(T)\right\}_{n\in \mathbb{N}}$ or $\left\{ \bar{\psi}^n_{_{RR,2}}(T)\right\}_{n\in \mathbb{N}}$ in order to approximate the solution $\psi(T)$ to the Riccati differential equation $\mathcal{E}^0_{\lambda, \mu, \nu}$ (equation \eqref{eq: fractionalRiccati}) is up to convenience: if we do not mind about the computation time and want a high accuracy, we can use the double step RR extrapolation. 
-Otherwise, if we have limited time and computational power, we can go for the single step RR extrapolation, in exchange of less accuracy. Therefore, both the single and double step RR extrapolation might prove useful in different situations.
+Otherwise, if we have limited time and computational power, we can go for the single step RR extrapolation, in exchange of less accuracy. 
+Therefore, both the single and double step RR extrapolation might prove useful in different situations.
 
 
 \begin{table}[ht]
-\caption{Richardson Romberg's estimates and computation times.}
 \centering
 \begin{tabular}{ |c|c|c|c|c| } 
  \hline
@@ -1771,6 +1768,7 @@ Otherwise, if we have limited time and computational power, we can go for the si
  32768 & 766.799500 & 766.799507 & 248.358794 & 308.513195 \\
  \hline
 \end{tabular}
+\caption{Richardson Romberg's estimates and computation times.}
 \label{tavolarichardsonrombergtest1}
 \end{table}
 
@@ -1781,7 +1779,7 @@ Otherwise, if we have limited time and computational power, we can go for the si
 
 
 \begin{figure}[H]
-  \includegraphics[width=\textwidth]{extrapolated/extrapolated.png}
+  \includegraphics[width=\textwidth, height=55mm]{extrapolated/extrapolated.png}
   \caption{$RR2$ vs $RR3$: the red and blue lines are $\bar{\psi}^n_{RR,3}(T)$ and $\bar{\psi}^n_{RR,2}(T)$, respectively, as functions of $\log(n)$.}\label{comparisonComExtr}
 \end{figure}
 
@@ -1797,7 +1795,6 @@ led to the following results.
 As for the coefficients we obtained the following:
 
 \begin{table}[ht]
-\caption{Coefficients of the fractional power series.}
 \centering
 \begin{tabular}{ |c|c| |c|c| |c|c| } 
  \hline
@@ -1824,13 +1821,14 @@ As for the coefficients we obtained the following:
  9 &  1.254454\cdot 10^{18} & 49 & 3.682738\cdot 10^{90}& 104 & $-3.071697 \cdot 10^{190}$\\
  \hline
 \end{tabular}
+\caption{Coefficients of the fractional power series.}
 \label{tavolacoefficientstest2}
 \end{table}
 
 Also in this case the growth of the coefficients looks exponential as we can see from the plot $f(k) = \log(|a_k|)$ (suggesting that it might exist some sort of relationship $a_k = m^k + \epsilon(k)$, for some function $\epsilon$ and constant $m$):
 
 \begin{figure}[H]
-  \includegraphics[width=\textwidth]{coefficients_test_2/output.png}
+  \includegraphics[width=\textwidth, height=60mm]{coefficients_test_2/output.png}
   \caption{$f(k) = \log(|a_k|)$}\label{barbaz2}
 \end{figure}
 
@@ -1848,12 +1846,12 @@ Using the Euler Discretization scheme we computed some $\bar{\psi}^n$. Here are 
 \squeezeup
 
 \begin{figure}[H]
-  \includegraphics[width=\textwidth, height= 60mm]{coefficients_test_2/n = 16.png}
+  \includegraphics[width=\textwidth, height=55mm]{coefficients_test_2/n = 16.png}
   \caption{(a) $n = 16$}
 \end{figure}
 
 \begin{figure}[H]
-  \includegraphics[width=\textwidth, height= 60mm]{coefficients_test_2/n = 64.png}
+  \includegraphics[width=\textwidth, height=55mm]{coefficients_test_2/n = 64.png}
   \caption{(a) $n = 64$}
 \end{figure}
 
@@ -1867,7 +1865,7 @@ Using the Euler Discretization scheme we computed some $\bar{\psi}^n$. Here are 
 
 
 \begin{figure}[H]
-  \includegraphics[width=\textwidth, height= 60mm]{coefficients_test_2/n = 256.png}
+  \includegraphics[width=\textwidth, height=55mm]{coefficients_test_2/n = 256.png}
   \caption{(a) $n = 256$}
 \end{figure}
 
@@ -1886,7 +1884,6 @@ Using the Euler Discretization scheme we computed some $\bar{\psi}^n$. Here are 
 As for the sequence $\left\{\bar{c_1}^n \right\}_{n\in \mathbb{N}}$ (defined in Eq. \ref{eq: 32inthepaper}), we obtained the following:
 
 \begin{table}[ht]
-\caption{Values of $\bar{c_1}^n$ and computation times.}
 \centering
 \begin{tabular}{ |c|c|c|c| } 
  \hline
@@ -1917,13 +1914,14 @@ As for the sequence $\left\{\bar{c_1}^n \right\}_{n\in \mathbb{N}}$ (defined in 
 8192 &	0.132789 &	60.255214 &	4.019897 \\
  \hline
 \end{tabular}
+\caption{Values of $\bar{c_1}^n$ and computation times.}
 \label{tavolavaluesofc1test2}
 \end{table}
 
 The results are very similar to thos of the previous test: the computation times are comparable and the ratio of consecutive computation times also seems to converge to $4$ as in the previous analysis. Furthermore, the sequence $\left\{ \bar{c_1}^n \right\}_{n\in \mathbb{N}}$ seems to converge to a value around $0.13$.
 
 \begin{figure}[H]
-  \includegraphics[width=\textwidth]{coefficients_test_2/c_1^n.png}
+  \includegraphics[width=\textwidth, height=55mm]{coefficients_test_2/c_1^n.png}
   \caption{$f(n)=\bar{c}_1^n $}\label{c1plot2}
 \end{figure}
 
@@ -1934,7 +1932,6 @@ Also here it seems that cns do converge ($c_1^n$ ??).
 And also the ratio of consecut compt times is around 4...
 
 \begin{table}[ht]
-\caption{Richardson Romberg's estimates and computation times.}
 \centering
 \begin{tabular}{ |c|c|c|c|c| } 
  \hline
@@ -1963,13 +1960,14 @@ And also the ratio of consecut compt times is around 4...
 32768  & 	0.925421	& 0.925421	& 215.273587	& 226.938969 \\
 \hline
 \end{tabular}
+\caption{Richardson Romberg's estimates and computation times.}
 \label{tavolarichardsonrombergtest2}
 \end{table}
 
 Left to add RR2 vs RR3 in funct of logn. 
 
 \begin{figure}[H]
-  \includegraphics[width=\textwidth]{coefficients_test_2/extrapolatedrr.png}
+  \includegraphics[width=\textwidth, height=60mm]{coefficients_test_2/extrapolatedrr.png}
   \caption{$RR2$ vs $RR3$ in function of $\log(n)$ }\label{comparisonComExtr2}
 \end{figure}
 
