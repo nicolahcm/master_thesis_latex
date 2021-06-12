@@ -2,7 +2,6 @@
 \usepackage[utf8]{inputenc}
 \usepackage{amsmath, amssymb, eucal, latexsym, multicol, amsthm, mathrsfs} 
 \usepackage[toc,page]{appendix}
-\usepackage{subcaption}
 \usepackage{graphicx}
 \usepackage{indentfirst}
 \usepackage{float}
@@ -1279,7 +1278,7 @@ Nevertheless we can have a faster convergence through an extrapolation if the me
 \section{Extrapolated Hybrid Method}
 \label{section: extrapolatedhyb}
 If we assume the error estimate \eqref{eq: 30inthepaper}, then, from the hybrid Euler expansion we can get an approximator for $\psi(T)$, namely the 
-Richardson-Romberg Approximator:
+(single step) Richardson-Romberg Approximator:
 \begin{equation}
     \label{eq: RR.1}
     \bar{\psi}^n_{_{RR,2}}(T) := 2 \bar{\psi}^n(T) - \bar{\psi}^{\frac{n}{2}}(T)
@@ -1328,7 +1327,7 @@ where the weights $\frac{1}{3}$, $-2$ and $\frac{8}{3}$ are not chosen randomly 
     \end{aligned}
 \end{equation*}
 which would make of it an even better approximator than $\bar{\psi}^n_{_{RR,2}}(T)$, as it converges to the solution $\psi$ faster than $\bar{\psi}^n_{_{RR,2}}(T)$. 
-However, we will see in the numerical tests below (in Subsection \ref{subsection: plots and confirm rr estimate}) that the estimate \eqref{eq: moreAccurateEstimate}, and thus the convergence rate \eqref{eq: rr3 convergence rate}, seem not to hold true. Nonetheless, in the numerical tests that we will perform (in Section \ref{section: confirmingRR3}), it appears that the double step RR estimate $\bar{\psi}^n_{RR,3}(T)$ still converges faster than the single step RR estimate $\bar{\psi}^n_{RR,2}(T)$, as $n\to +\infty$.
+However, we will see in the numerical tests below (in Subsection \ref{subsection: plots and confirm rr estimate}) that the estimate \eqref{eq: moreAccurateEstimate}, and thus the convergence rate \eqref{eq: rr3 convergence rate}, seem not to hold. Nonetheless, in the numerical tests that we will perform in Section \ref{section: confirmingRR3}, it appears that the double step RR estimate $\bar{\psi}^n_{RR,3}(T)$ still converges faster than the single step RR estimate $\bar{\psi}^n_{RR,2}(T)$, as $n\to +\infty$.
 
 \begin{remark}
 \label{remark: rr2 and rr3 do converge}
