@@ -263,7 +263,7 @@ where $\psi$ solves the fractional differential Riccati equation
     \label{eq: fractionalRiccati}
     D^\alpha \psi(t) = \frac{1}{2}(u_1^2-u_1) + \eta (u_1 \rho \zeta-1) \psi_1(t)  +\frac{(\eta \zeta)^2}{2}\psi_1^2(t), \hspace{0.2cm} I_{1-\alpha}\psi(0)=0,
 \end{equation}
-where $D^\alpha$ and $I_{1-\alpha}$, are fractional Riemann-Liouville integrals and derivatives. We remind that we introduced the coefficient $\alpha \in (0,2)$ in the passage from the classical Heston model to the fractional Heston model \eqref{eq: fractionalHeston}. For the existence and uniqueness of a solution to this Riccadi differential equation we refer to \cite{Omar}.
+where $D^\alpha$ and $I_{1-\alpha}$, are fractional Riemann-Liouville integrals and derivatives. We recall that we introduced the coefficient $\alpha \in (0,2)$ in the passage from the classical Heston model to the fractional Heston model \eqref{eq: fractionalHeston}. For the existence and uniqueness of a solution to this Riccadi differential equation we refer to \cite{Omar}.
 
 Notice that with the fractional differential Riccati equation we substituted the regular differentiation with the fractional Riemann-Liouville differentiation, which will be defined rigorously later in Definition \ref{definition: riemannliouville deriv}.
 \\
@@ -929,7 +929,7 @@ Comparing the two series gives us a recurrent relation on the coefficients $a_k$
     a_0 = 0,
     \end{cases}
 \end{equation}
-where we remind that $a_k^{*2}$ solely depends on the coeffients $a_l$ for $l\le k$.
+where we recall that $a_k^{*2}$ solely depends on the coeffients $a_l$ for $l\le k$.
 \\
 The relation $(A_{\lambda, \mu, \nu} )$ determines uniquely the coefficients $a_k$ of the fractional power series. 
 Notice also that since $a_0=0$, then $\psi(0)=0$, which is our initial condition.
@@ -1190,6 +1190,7 @@ If $T< \theta \widehat{R}_\psi$,
 we simply evaluate the truncated fractional power series (whose coefficients satisfy $(A_{\lambda, \mu, \nu} )$) in $T$ and set the result as the value assumed by $\psi(T)$.
 
 \subsection{Case 2: $T >  \theta \widehat{R}_\psi$.}
+\label{subsection: firstpsin}
 If $T >  \theta \widehat{R}_\psi$,
 we use the Euler discretization scheme, which we are going to introduce below.
 \\ 
@@ -1213,6 +1214,7 @@ In particular, for the values $k$ such that $0 \le k\le k_0$, we set $\bar{\psi}
 In order to compute the other values $\bar{\psi}^n (t_k)$, for $k \in \left\{ k_0+1, k_0+2, \cdots, n \right\}$, we use the following Euler Scheme:
 
 \subsection{Euler Scheme}
+\label{subsection: secondpsin}
 \noindent
 Given the integral form of the Riccati $\mathcal{E}^0_{\lambda, \mu, \nu}$:
 \begin{equation}
@@ -1350,8 +1352,13 @@ In the next chapter we will see a practical sperimentation to get a hang of this
 
 \chapter{Numerical Test: Hybrid Euler scheme.}
 
-In this chapter we will run some numerical tests to get a hold on the hybrid Euler scheme. For the code refer to the Appendix \ref{appendix: hybridEulerScheme}.
-\\
+In this chapter we will run some numerical tests to get a hold on the hybrid Euler scheme. For the code we refer to the Appendix \ref{appendix: hybridEulerScheme}. 
+
+These tests are run with a computer with the following properties:
+\begin{equation}
+\label{eq: ref properties pc}
+\textrm{12 CPUs i7-8750H  @ 2.20GHz.}
+\end{equation}
 
 We will use with the following parameters (which are also found in real applications, see \cite{Main}):
 
@@ -1368,7 +1375,7 @@ Let us see the general procedure of the hybrid Euler scheme.
 \section{General Procedure} 
 \label{section: generalprocedure}
 
-Let $n$ be fixed. The general procedure to compute $\bar{\psi}^n(T)$ (the $n$-th Euler discretization), after having set the parameters $\alpha,\lambda,\mu,\nu, T$ and the accuracy measure $\epsilon_0$, consists of the following steps:
+Let $n$ be fixed. The general procedure to compute $\bar{\psi}^n(T)$ (the $n$-th Euler discretization, described in Subsections \ref{subsection: firstpsin} and \ref{subsection: secondpsin}), after having set the parameters $\alpha,\lambda,\mu,\nu, T$ and the accuracy measure $\epsilon_0$, consists of the following steps:
 \\
 \\
 1) Fix $r_{max}$ (we will use $r_{max}=105$) and $\theta$ (usually 0.9)
@@ -1396,7 +1403,7 @@ We ran a test with the parameters \eqref{eq: NumericalTestParameters}, the preci
 and $T=\frac{1}{252}$. The first $4$ steps are indipendent of $n$, so that the procedure in these steps is the same when computing $\bar{\psi}^n(t_k)$ for any $n$ positive integer.
 \\
 \\
-\textbf{Step 1.} We chose $r_{max}=105$ and $\theta = 0.9$. The choice of $r_{max}$ being due to machine's limitations (the absolute values of the coefficients grow very fast as we can see from Figure \ref{barbaz}). 
+\textbf{Step 1.} We chose $r_{max}=105$ and $\theta = 0.9$. The choice of $r_{max}$ being due to machine's limitations (the absolute values of the coefficients grow very fast as we can see from Figure \ref{barbaz} and Table \ref{tavola1coefficienti}). 
 \\
 \\
 \textbf{Step 2.} The coefficients were computed up to the $r_{max}$-th coefficient. 
@@ -1448,14 +1455,14 @@ In Table \ref{tavola1coefficienti} are displayed some of the coefficients that w
 %\end{figure}
 
 \noindent
-The growth of the absolute values of the coefficients $\left\{ |a_k|\right\}_{k\in\mathbb{N}}$ is exponential, confirmed by the plot of $f(k) = \log(|a_k|)$ in Figure \ref{barbaz}.
+The growth of the absolute values of the coefficients $\left\{ |a_k|\right\}_{k\in\mathbb{N}}$ is exponential, confirmed by Figure \ref{barbaz} where is plotted the curve $f(k): = \log(|a_k|)$ for $k=0,1,\cdots, 105$.
 
 
 \begin{figure}[H]
   \includegraphics[width=\textwidth]{coefficients/logcoeff.png}
-  \caption{$f(k) = \log(|a_k|)$}\label{barbaz}
+  \caption{plot of the curve $f(k) = \log(|a_k|)$, $k=0,1,\cdots,105$, confirming the exponential growth of the absolute values of the coefficients $\left\{|a_k|\right\}_{k\in\mathbb{N}} $ of $\psi(t) = \sum_{k=0}^\infty a_kt^{k\alpha}$.}
+\label{barbaz}
 \end{figure}
-
 \noindent
 \textbf{Step 3.}
 The estimated convergence radius evaluated via \eqref{eq: estimateRadiusAnother} is $\widehat{R}_\psi = 0.00109$ (the result is rounded), computed with the knowledge of $a_{r_{max}} = a_{105} = 6.21\cdot 10^{199}$ and the formula \eqref{eq: estimateRadiusAnother}:
@@ -1466,7 +1473,7 @@ where we used the formula \eqref{eq: aprimo_R_radius_convergence} that gives us 
 
 \noindent
 Note that $\widehat{R}_\psi < \frac{1}{252}= T \approx 0.004$ so that $$\theta \widehat{R}_\psi = 0.9 \widehat{R}_\psi <\frac{1}{252}=T.$$ 
-Thus we will use the hybrid approach, as $T$ does not belong to the domain of absolute convergence of the fractioanl power series: the fractional power series is used up to $\theta \widehat{R}_\psi$, after which the Euler scheme is applied in order to compute the values $\bar{\psi}^n(t_k)$, $k=0,1,\cdots,n$.
+Thus we will use the hybrid approach, as $T$ does not belong to the domain of absolute convergence of the fractional power series: the fractional power series is used up to $\theta \widehat{R}_\psi$, after which the Euler scheme is applied in order to compute the values $\bar{\psi}^n(t_k)$, $k=0,1,\cdots,n$.
 \\
 \\
 \textbf{Step 4.}
@@ -1487,17 +1494,17 @@ In Figure \ref{fig: psi n=16}, \ref{fig: psi n=64} and \ref{fig: psi n=256} we d
 
 \begin{figure}[H]
   \includegraphics[width=\textwidth, height= 55mm]{barpsin/n = 16.png}
-  \caption{(a) curve of $\bar{\psi}^{16}(t)$.} \label{fig: psi n=16}
+  \caption{(a) curve of $\bar{\psi}^{16}(t)$ evaluated at $t=t_0,t_1,\cdots t_{16}$.} \label{fig: psi n=16}
 \end{figure}
 
 \begin{figure}[H]
   \includegraphics[width=\textwidth, height= 55mm]{barpsin/n = 64.png}
-  \caption{(b) curve of $\bar{\psi}^{64}(t)$.} \label{fig: psi n=64}
+  \caption{(b) curve of $\bar{\psi}^{64}(t)$ evaluated at $t=t_0,t_1,\cdots t_{64}$.} \label{fig: psi n=64}
 \end{figure}
 
 \begin{figure}[H]
   \includegraphics[width=\textwidth, height= 55mm]{barpsin/n = 256.png}
-  \caption{(c) curve of $\bar{\psi}^{256}(t)$.} \label{fig: psi n=256}
+  \caption{(c) curve of $\bar{\psi}^{256}(t)$ evaluated at $t=t_0,t_1,\cdots t_{256}$.} \label{fig: psi n=256}
 \end{figure}
 
 
@@ -1520,7 +1527,7 @@ Notice that the transition from the evaluation of the power series to the Euler 
 Moreover, notice that the shape of the curve is robust, as it is already evident since $n=16$. Taking larger values of $n$ does not change the shape, but only contributes to have a more ``continuous" function.
 \\
 
-Up to $n=4096$, the computation times were quite reasonable, being under $1$ minute the evaluation of each $\bar{\psi}^n$.
+Up to $n=4096$, the computation times were quite reasonable, being under $1$ minute\footnote{We remind we used a computer with the following properties: 12 CPUs i7-8750H  @ 2.20GHz.} the evaluation of each $\bar{\psi}^n$.
 
 
 
@@ -1543,14 +1550,14 @@ so that defining $\psi := \frac{\phi}{\lambda}$ follows that $\psi$ is a solutio
 \\
 \\
 \noindent
-The optimal threshold factor $\theta = \theta(n)$ is suggested to be (see \cite{Main} for reference)
+The optimal threshold factor $\theta = \theta(n)$ (recall Subsection \ref{subsection: accuracy in truncating}) is suggested to be (see \cite{Main} for reference)
 \\
 $$\theta(n) := \min \left(0.65 + 0.3\left( \frac{n-32}{4064} \right)^{0.25}, 0.925\right) $$
 \\
 \noindent
 for $32 \le n \le 4096$.
 Notice that the function $\theta(n)$ defined above is increasing, reaching a maximum of $0.925$. 
-However, for values of $n\approx 2000$ we already have $\theta(n) \approx 0.9$, and preferably we would like to have greater values of $n$ for a better accuracy. Moreover, for such values of $n$ the computational cost is still very low for the machine (under one minute of computation for $\bar{\psi}^n$, $n\le 4000$, in this particular test with my machine\footnote{A computer with 12 CPUs i7-8750H  @ 2.20GHz.}). This is why in our experimentations we set $\theta=0.9$ fixed independent by $n$.
+However, for values of $n\approx 2000$ we already have $\theta(n) \approx 0.9$, and preferably we would like to have greater values of $n$ for a better accuracy. Moreover, for such values of $n$ the computational cost is still very low for the machine (under one minute of computation for $\bar{\psi}^n$, $n\le 4000$, in this particular test with a machine with the properties described in \eqref{eq: ref properties pc}). This is why in our experimentations we set $\theta=0.9$ fixed independent by $n$.
 
 \section{Computing $c_1$}
 \label{section: computingc1}
@@ -1558,19 +1565,21 @@ However, for values of $n\approx 2000$ we already have $\theta(n) \approx 0.9$, 
 In this section we continue the numerical tests, using the same parameters given in equation \eqref{eq: NumericalTestParameters} and $T=\frac{1}{252}$ with precision set to $\epsilon_0 = 0.01$. 
 As discussed previously (Subsection \ref{subsection: rrfirst_estimate} and Section \ref{section: extrapolatedhyb}), if we assume the estimate \eqref{eq: 30inthepaper}, which we recall being
 $$ \bar{\psi}^n(T) - \psi(T) = \frac{c_1}{n}+ o(n^{-1}) $$
-for some constant $c_1 \in \mathbb{R}$, then we can use the Richardson-Romberg extrapolation. Furthermore, the constant $c_1$ can be computed as described in Remark \ref{remark: c1_series}, i.e., as limit of the sequence $\left\{ \bar{c}_1^n \right\}_{n \in \mathbb{N}}$ ($n\to +\infty$), which we recall being defined by
+for some constant $c_1 \in \mathbb{R}$, then we can use the Richardson-Romberg extrapolation. Furthermore, the constant $c_1$ can be computed as described in Remark \ref{remark: c1_series}, i.e., as limit of the sequence $\left\{ \bar{c}_1^n \right\}_{n \in \mathbb{N}}$ (as $n\to +\infty$), which we recall being defined by
 $$ \bar{c}_1^n := 2n \left( \bar{\psi}^n(T) - \bar{\psi}^{2n}(T) \right). $$ 
 From the previous Section (Section \ref{section: generalprocedure}) we already have the algorithm to compute $\bar{\psi}^n(T)$ for any $n$ positive integer, so that we can easily find $\bar{c}_1^n$. 
-The results that we obtained are displayed in Table \ref{c1table}, where are presented the different values of $\bar{c}_1^n$ that we obtained for some values of $n$.
+The results that we obtained are displayed in Table \ref{c1table}, where are presented the different values of $\bar{c}_1^n$ that we obtained for $n= 2^2, 2^3, \cdots, 2^{17}$. 
+We also have the column with the computation time in seconds for each $\bar{c}_1^n$. 
+Furthermore, there is the ratio of consecutive computation times: if we denote by $C(\bar{c}_1^n)$ the computation time in seconds required to evaluate $\bar{c}_1^n$, then the column "ratio of consecutive computation times" is $\frac{C(\bar{c}_1^n)}{C(\bar{c}_1^{n/2})}$.
 
 \begin{table}[ht]
-\caption{Values of $\bar{c_1}^n$ and computation times.}
+\caption{evaluations of $\bar{c_1}^n$ (defined in equation \eqref{eq: 32inthepaper}) and computation times.}
 \centering
 \begin{tabular}{ |c|c|c|c| } 
  \hline
  $n$ & $\bar{c_1}^n$ & {\footnotesize computation time (seconds)} & {\footnotesize ratio of consecutive computation times} \\ 
  \hline
- 4 & 244.789055 & 0.005540 & NaN\\ 
+ 4 & 244.789055 & 0.005540 & - \\ 
  \hline
  8 & 247.620217  & 0.005834 & 1.053153 \\
  \hline
@@ -1611,19 +1620,23 @@ The results that we obtained are displayed in Table \ref{c1table}, where are pre
 %  \caption{$\bar{c}_1^n table $}\label{c1table}
 %\end{figure}
 
-It seems that the sequence $\left\{ \bar{c}_1^n\right\}_{n\in \mathbb{N}}$ converges, suggesting (see also Figure \ref{c1plot1}) that the estimate \eqref{eq: 30inthepaper} holds.  We take as reference limit the value $$c_1^{ref} :=\bar{c}_1^{n_{max}} = 196.510382,$$  where $n_{max} = 2^{17}=131072$.
+It seems that the sequence $\left\{ \bar{c}_1^n\right\}_{n\in \mathbb{N}}$ converges (see also Figure \ref{c1plot1}), suggesting that the estimate \eqref{eq: 30inthepaper} holds.  We take as reference limit the value 
+\begin{equation}
+\label{eq: c1maxref}
+ c_1^{ref} :=\bar{c}_1^{n_{max}} = 196.510382,
+\end{equation}  where $n_{max} = 2^{17}=131072$.
 \\
 
-In the next Subsection \ref{subsection: plots and confirm rr estimate} we will see some more plots that strongly supports the validity of the two estimates \eqref{eq: 30inthepaper} and \eqref{eq: moreAccurateEstimate}, which we remind being, respectively, $$\bar{\psi}^n(T)-\psi(T) = \frac{c_1}{n} + o(n^{-1})$$ for a constant $c_1\in \mathbb{R}$ and $$\bar{\psi}^n(T)-\psi(T) = \frac{c_1}{n} + \frac{c_2}{n^2} + o(n^{-2})$$ for some constants $c_1, c_2\in \mathbb{R}$. We will refer to them as the RR estimates (first and second order respectively), since they allow us to perform the Richardson-Romberg extrapolation.
+In the next Subsection \ref{subsection: plots and confirm rr estimate} we will see some more plots that will test the validity of the two estimates \eqref{eq: 30inthepaper} and \eqref{eq: moreAccurateEstimate}, which we remind being, respectively, $$\bar{\psi}^n(T)-\psi(T) = \frac{c_1}{n} + o(n^{-1})$$ for a constant $c_1\in \mathbb{R}$ and $$\bar{\psi}^n(T)-\psi(T) = \frac{c_1}{n} + \frac{c_2}{n^2} + o(n^{-2})$$ for some constants $c_1, c_2\in \mathbb{R}$. We will refer to them as the RR estimates (first and second order respectively), since they allow us to perform the Richardson-Romberg extrapolation (single and double step, respectively).
 
-\subsection{Plots and validation of the RR estimates}
+\subsection{Plots and validation of the RR estimates.}
 \label{subsection: plots and confirm rr estimate}
 
 Figure \ref{c1plot1} shows $\bar{c_1}^n$ as a function of $n$ (for numerical values see Table \ref{c1table}).
 
 \begin{figure}[h]
   \includegraphics[width=10.5cm]{c1n/c_1^n.png}
-  \caption{we plot $\bar{c}_1^n$ as a function of $n$: $f(n):=\bar{c}_1^n $}\label{c1plot1}
+  \caption{we plot $\bar{c}_1^n$ as a function of $n$: $f(n):=\bar{c}_1^n $.}\label{c1plot1}
 \end{figure}
 
 From the plot in Figure \ref{c1plot1} it is more evident that the sequence $\left\{\bar{c}_1^n \right\}_{n\in\mathbb{N}}$ converges.
@@ -1635,7 +1648,7 @@ Now, the plot in Figure \ref{c1plotlog} shows  $\log(\bar{c_1}^n-\bar{c_1}^{ref}
 
 \begin{figure}[h]
   \includegraphics[width=11.5cm]{c1n/c_1log.png}
-  \caption{$\log(\bar{c_1}^n-\bar{c_1}^{ref})$ vs $\log(n)$ }\label{c1plotlog}
+  \caption{$\log(\bar{c_1}^n-\bar{c_1}^{ref})$ vs $\log(n)$. }\label{c1plotlog}
 \end{figure}
 
 In this particular case, after applying a linear regression, we obtained that a coefficient of $-0.68382593$ is fitting the curve. 
@@ -1657,7 +1670,7 @@ we would have that (considering $c_1 \approx c_1^{ref}$)
     \end{aligned}
 \end{equation}
 \noindent
-which implies
+and therefore
 
 \begin{equation}
     \log(\bar{c_1}^n- c_1^{ref}) \approx \log(\frac{3c_2}{n}) = C - \log(n).
@@ -1668,12 +1681,12 @@ This tells us that the second order RR estimate might not be true, suggesting an
     \label{eq: estimateRRwithbeta}
     \bar{\psi}^n(T) - \bar{\psi}(T) = \frac{c_1}{n} + \frac{c_2}{n^{2-\beta}} + o(n^{\beta-2}),
 \end{equation}
-with $\beta \in (0,1)$ might depend on $\lambda, \mu, \nu$. Performing similar computations as in \eqref{eq: compWitBetaLog} yields to 
+where $\beta \in (0,1)$ might depend on $\lambda, \mu, \nu$. Performing similar computations as in \eqref{eq: compWitBetaLog}, yields to 
 \begin{equation}
      \log(\bar{c_1}^n- c_1^{ref}) \approx C - (1-\beta) \log(n).
 \end{equation}
 \noindent
-In our particular case it would be $(1-\beta) = -0.6838$, which means $\beta \approx -0.32$. 
+In our particular case it would be $(1-\beta) = -0.6838$, namely $\beta \approx -0.32$. 
 \\
 However, in all of this, it is noted in \cite{Main} (in Section $4.5$) that the regression coefficient changes as we consider wider ranges of values for $n$.
 \\
@@ -1686,16 +1699,16 @@ Below in Section \ref{section: confirmingRR3} we will compare the computation ti
 
 \subsection{Computational times for the sequence $\left\{ \bar{c}_1^n \right\}_{n\in\mathbb{N}}$.}
 
-From Table \ref{c1table} we observe that the computation time of $\bar{c}_1^n$ increases exponentially with respect to $n$: if $n$ doubles, the computational time of evaluation of $\bar{c}_1^n$ quadruples.
+From Table \ref{c1table} we can observe that the computation time of $\left\{ \bar{c}_1^n \right\}_{n\in\mathbb{N}}$ increases exponentially with respect to $n$: if $n$ doubles, the computational time (in seconds) of evaluation of $\bar{c}_1^n$ quadruples.
 \\
-In Figure \ref{comptimes} there is the plot of $\log$(computation time of $\bar{c}_1^n$) vs $\log(n)$.
+In Figure \ref{comptimes} is presented the plot of $\log$(computation time of $\bar{c}_1^n$) vs $\log(n)$.
 
 \begin{figure}[H]
   \includegraphics[width=\textwidth]{c1n/comp_times.png}
-  \caption{$\log$(computation time of $\bar{c}_1^n$) vs $\log(n)$ }\label{comptimes}
+  \caption{$\log$(computation time of $\bar{c}_1^n$) vs $\log(n)$.}\label{comptimes}
 \end{figure}
 
-Applying a linear regression to the curve in Figure \ref{comptimes} yields a coefficient of $1.99993845$ that fits the curve. We could have already expected it by looking at the results in Table \ref{c1table} (for $n=2^{15}$, computing $\bar{c_1}^n$ requires about fifteen minutes, while for  $n=2^{16}$ it takes an hour and for $n=2^{17}$ it takes four hours of computation).
+Applying a linear regression to the curve in Figure \ref{comptimes} yields a coefficient of $1.99993845$ fitting the curve. We could have already expected it by looking at the results in Table \ref{c1table} (for $n=2^{15}$, computing $\bar{c_1}^n$ requires about fifteen minutes, while for  $n=2^{16}$ it takes an hour and for $n=2^{17}$ it takes four hours of computation).
 
 
 \section{Richardson-Romberg's extrapolations.}
@@ -1716,12 +1729,12 @@ $$\bar{\psi}^n_{_{RR,3}}(T) := \frac{1}{2} \bar{\psi}^{n/4}(T) - 2 \bar{\psi}^{n
 We notice from equations \eqref{eq: multiStepRR} and \eqref{eq: RR.1} that in order to compute $\bar{\psi}^n_{_{RR,2}}(T)$ we need to apply the hybrid Euler scheme through which we evaluate first $\bar{\psi}^n(T)$ and $ \bar{\psi}^{\frac{n}{2}}(T)$.
  Meanwhile, in order to compute $\bar{\psi}^n_{_{RR,3}}(T)$, we need to evaluate $\bar{\psi}^n(T)$, $ \bar{\psi}^{\frac{n}{2}}(T)$ and $ \bar{\psi}^{\frac{n}{4}}(T)$ through the hybrid Euler scheme. 
  Therefore, in terms of computation time, it is expected that the evaluation of $\bar{\psi}^n_{_{RR,3}}(T)$ will require more time than the evaluation of $\bar{\psi}^n_{_{RR,2}}(T)$. 
-This is indeed confirmed by the results in Table \ref{tavolarichardsonrombergtest1}, where we can observe that the computation time of $ \bar{\psi}^n_{_{RR,3}}(T)$ in seconds (column "comp. time RR3") is typically higher than the evaluation of $\bar{\psi}^n_{_{RR,3}}(T)$ (column "comp. time RR2").
+This is indeed confirmed by the results in Table \ref{tavolarichardsonrombergtest1}, where we can observe that the computation time of $ \bar{\psi}^n_{_{RR,3}}(T)$ in seconds (column ``comp. time RR3") is typically higher than the evaluation of $\bar{\psi}^n_{_{RR,3}}(T)$ (column ``comp. time RR2").
 \\
 
 So far, the sequence $\left\{ \bar{\psi}^n_{_{RR,3}}(T)\right\}_{n\in \mathbb{N}}$ seems not to have any advantage over $\left\{ \bar{\psi}^n_{_{RR,2}}(T)\right\}_{n\in \mathbb{N}}$, as it takes more time to be computed. 
-However, there is a particular aspect of the double step RR extrapolation: it seems to converge faster as $n\to +\infty$. We can observe this in Figure \ref{comparisonComExtr} where are plotted the curves of $\bar{\psi}^n_{_{RR,3}}(T)$ and $\bar{\psi}^n_{_{RR,2}}(T)$ as functions of $\log(n)$. 
-Both curves converge to the same value, as we already know (recall Remark \ref{remark: rr2 and rr3 do converge}), but $\bar{\psi}^n_{_{RR,3}}(T)$ seems to converge at a faster rate, as $n\to +\infty$ \textcolor{red}.
+However, there is a particular aspect of the double step RR extrapolation: it converges faster as $n\to +\infty$. We can observe this in Figure \ref{comparisonComExtr} where are plotted the curves of $\bar{\psi}^n_{_{RR,3}}(T)$ and $\bar{\psi}^n_{_{RR,2}}(T)$ as functions of $\log(n)$. 
+Both curves converge to the same value, as we already know (recall Remark \ref{remark: rr2 and rr3 do converge}), but $\bar{\psi}^n_{_{RR,3}}(T)$ converges at a faster rate than $\bar{\psi}^n_{_{RR,2}}(T)$, as $n\to +\infty$.
 \\
 
 Finally, deciding whether to use $\left\{ \bar{\psi}^n_{_{RR,3}}(T)\right\}_{n\in \mathbb{N}}$ or $\left\{ \bar{\psi}^n_{_{RR,2}}(T)\right\}_{n\in \mathbb{N}}$ in order to approximate the solution $\psi(T)$ to the Riccati differential equation $\mathcal{E}^0_{\lambda, \mu, \nu}$ (equation \eqref{eq: fractionalRiccati}) is up to convenience: if we do not mind about the computation time and want a high accuracy, we can use the double step RR extrapolation. 
@@ -1769,7 +1782,7 @@ Otherwise, if we have limited time and computational power, we can go for the si
 
 \begin{figure}[H]
   \includegraphics[width=\textwidth]{extrapolated/extrapolated.png}
-  \caption{$RR2$ vs $RR3$ in function of $\log(n)$ }\label{comparisonComExtr}
+  \caption{$RR2$ vs $RR3$: the red and blue lines are $\bar{\psi}^n_{RR,3}(T)$ and $\bar{\psi}^n_{RR,2}(T)$, respectively, as functions of $\log(n)$.}\label{comparisonComExtr}
 \end{figure}
 
 

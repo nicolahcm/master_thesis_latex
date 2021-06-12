@@ -141,8 +141,10 @@
 \newlabel{section: hybrid expansion threshold}{{3.2}{35}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.2.1}Case 1: $T< \theta \setbox \z@ \hbox {\mathsurround \z@ $\textstyle R$}\mathaccent "0362{R}_\psi $.}{35}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.2.2}Case 2: $T > \theta \setbox \z@ \hbox {\mathsurround \z@ $\textstyle R$}\mathaccent "0362{R}_\psi $.}{36}\protected@file@percent }
+\newlabel{subsection: firstpsin}{{3.2.2}{36}}
 \newlabel{eq: tk and k0}{{3.6}{36}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.2.3}Euler Scheme}{36}\protected@file@percent }
+\newlabel{subsection: secondpsin}{{3.2.3}{36}}
 \newlabel{eq: temporaryVariable3..2}{{3.7}{36}}
 \newlabel{eq: 28inthepaper}{{3.8}{37}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.2.4}How good does $\bar  {\psi }^n$ approximate $\psi $?}{37}\protected@file@percent }
@@ -165,64 +167,66 @@
 \@writefile{toc}{\contentsline {chapter}{\numberline {4}Numerical Test: Hybrid Euler scheme.}{41}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\newlabel{eq: NumericalTestParameters}{{4.1}{41}}
+\newlabel{eq: ref properties pc}{{4.1}{41}}
+\newlabel{eq: NumericalTestParameters}{{4.2}{41}}
 \@writefile{toc}{\contentsline {section}{\numberline {4.1}General Procedure}{41}\protected@file@percent }
 \newlabel{section: generalprocedure}{{4.1}{41}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.1.1}Numerical Results}{42}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {4.1}{\ignorespaces coefficients $\left \{ a_k \right \}_{k \in \mathbb  {N}}$ of the fractional power series $\psi (t) = \DOTSB \sum@ \slimits@ _{k=0}^\infty a_k t^{k\alpha }$.\relax }}{42}\protected@file@percent }
-\newlabel{tavola1coefficienti}{{4.1}{42}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.1}{\ignorespaces $f(k) = \qopname  \relax o{log}(|a_k|)$\relax }}{43}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {4.1}{\ignorespaces coefficients $\left \{ a_k \right \}_{k \in \mathbb  {N}}$ of the fractional power series $\psi (t) = \DOTSB \sum@ \slimits@ _{k=0}^\infty a_k t^{k\alpha }$.\relax }}{43}\protected@file@percent }
+\newlabel{tavola1coefficienti}{{4.1}{43}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.1}{\ignorespaces plot of the curve $f(k) = \qopname  \relax o{log}(|a_k|)$, $k=0,1,\cdots  ,105$, confirming the exponential growth of the absolute values of the coefficients $\left \{|a_k|\right \}_{k\in \mathbb  {N}} $ of $\psi (t) = \DOTSB \sum@ \slimits@ _{k=0}^\infty a_kt^{k\alpha }$.\relax }}{43}\protected@file@percent }
 \newlabel{barbaz}{{4.1}{43}}
-\newlabel{eq: truncated series n step4}{{4.2}{43}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.2}{\ignorespaces (a) curve of $\bar  {\psi }^{16}(t)$.\relax }}{44}\protected@file@percent }
+\newlabel{eq: truncated series n step4}{{4.3}{44}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.2}{\ignorespaces (a) curve of $\bar  {\psi }^{16}(t)$ evaluated at $t=t_0,t_1,\cdots  t_{16}$.\relax }}{44}\protected@file@percent }
 \newlabel{fig: psi n=16}{{4.2}{44}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.3}{\ignorespaces (b) curve of $\bar  {\psi }^{64}(t)$.\relax }}{44}\protected@file@percent }
-\newlabel{fig: psi n=64}{{4.3}{44}}
-\citation{Main}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.4}{\ignorespaces (c) curve of $\bar  {\psi }^{256}(t)$.\relax }}{45}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {4.3}{\ignorespaces (b) curve of $\bar  {\psi }^{64}(t)$ evaluated at $t=t_0,t_1,\cdots  t_{64}$.\relax }}{45}\protected@file@percent }
+\newlabel{fig: psi n=64}{{4.3}{45}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.4}{\ignorespaces (c) curve of $\bar  {\psi }^{256}(t)$ evaluated at $t=t_0,t_1,\cdots  t_{256}$.\relax }}{45}\protected@file@percent }
 \newlabel{fig: psi n=256}{{4.4}{45}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.1.2}Computational Optimization and Observations}{45}\protected@file@percent }
 \citation{Main}
+\citation{Main}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1.2}Computational Optimization and Observations}{46}\protected@file@percent }
 \@writefile{toc}{\contentsline {section}{\numberline {4.2}Computing $c_1$}{46}\protected@file@percent }
 \newlabel{section: computingc1}{{4.2}{46}}
-\@writefile{lot}{\contentsline {table}{\numberline {4.2}{\ignorespaces Values of $\bar  {c_1}^n$ and computation times.\relax }}{47}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {4.2}{\ignorespaces evaluations of $\bar  {c_1}^n$ (defined in equation \textup  {\hbox {\mathsurround \z@ \normalfont  (\ignorespaces 3.10\hbox {}\unskip \@@italiccorr )}}) and computation times.\relax }}{47}\protected@file@percent }
 \newlabel{c1table}{{4.2}{47}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.1}Plots and validation of the RR estimates}{47}\protected@file@percent }
-\newlabel{subsection: plots and confirm rr estimate}{{4.2.1}{47}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.5}{\ignorespaces we plot $\bar  {c}_1^n$ as a function of $n$: $f(n):=\bar  {c}_1^n $\relax }}{48}\protected@file@percent }
+\newlabel{eq: c1maxref}{{4.4}{47}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.1}Plots and validation of the RR estimates.}{48}\protected@file@percent }
+\newlabel{subsection: plots and confirm rr estimate}{{4.2.1}{48}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.5}{\ignorespaces we plot $\bar  {c}_1^n$ as a function of $n$: $f(n):=\bar  {c}_1^n $.\relax }}{48}\protected@file@percent }
 \newlabel{c1plot1}{{4.5}{48}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.6}{\ignorespaces $\qopname  \relax o{log}(\bar  {c_1}^n-\bar  {c_1}^{ref})$ vs $\qopname  \relax o{log}(n)$ \relax }}{48}\protected@file@percent }
-\newlabel{c1plotlog}{{4.6}{48}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.6}{\ignorespaces $\qopname  \relax o{log}(\bar  {c_1}^n-\bar  {c_1}^{ref})$ vs $\qopname  \relax o{log}(n)$. \relax }}{49}\protected@file@percent }
+\newlabel{c1plotlog}{{4.6}{49}}
+\newlabel{eq: compWitBetaLog}{{4.5}{49}}
+\newlabel{eq: estimateRRwithbeta}{{4.7}{49}}
 \citation{Main}
-\newlabel{eq: compWitBetaLog}{{4.3}{49}}
-\newlabel{eq: estimateRRwithbeta}{{4.5}{49}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.2.2}Computational times for the sequence $\left \{ \bar  {c}_1^n \right \}_{n\in \mathbb  {N}}$.}{50}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {4.7}{\ignorespaces $\qopname  \relax o{log}$(computation time of $\bar  {c}_1^n$) vs $\qopname  \relax o{log}(n)$ \relax }}{50}\protected@file@percent }
-\newlabel{comptimes}{{4.7}{50}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.3}Richardson-Romberg's extrapolations.}{50}\protected@file@percent }
-\newlabel{section: confirmingRR3}{{4.3}{50}}
-\@writefile{lot}{\contentsline {table}{\numberline {4.3}{\ignorespaces Richardson Romberg's estimates and computation times.\relax }}{52}\protected@file@percent }
-\newlabel{tavolarichardsonrombergtest1}{{4.3}{52}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.8}{\ignorespaces $RR2$ vs $RR3$ in function of $\qopname  \relax o{log}(n)$ \relax }}{52}\protected@file@percent }
-\newlabel{comparisonComExtr}{{4.8}{52}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.4}Another Test with different parameters}{52}\protected@file@percent }
-\newlabel{eq: NumericalTestParameters2}{{4.7}{52}}
-\@writefile{lot}{\contentsline {table}{\numberline {4.4}{\ignorespaces Coefficients of the fractional power series.\relax }}{53}\protected@file@percent }
-\newlabel{tavolacoefficientstest2}{{4.4}{53}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.9}{\ignorespaces $f(k) = \qopname  \relax o{log}(|a_k|)$\relax }}{53}\protected@file@percent }
-\newlabel{barbaz2}{{4.9}{53}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.10}{\ignorespaces (a) $n = 16$\relax }}{54}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {4.11}{\ignorespaces (a) $n = 64$\relax }}{54}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {4.12}{\ignorespaces (a) $n = 256$\relax }}{55}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {4.5}{\ignorespaces Values of $\bar  {c_1}^n$ and computation times.\relax }}{55}\protected@file@percent }
-\newlabel{tavolavaluesofc1test2}{{4.5}{55}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.13}{\ignorespaces $f(n)=\bar  {c}_1^n $\relax }}{56}\protected@file@percent }
-\newlabel{c1plot2}{{4.13}{56}}
-\@writefile{lot}{\contentsline {table}{\numberline {4.6}{\ignorespaces Richardson Romberg's estimates and computation times.\relax }}{56}\protected@file@percent }
-\newlabel{tavolarichardsonrombergtest2}{{4.6}{56}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.14}{\ignorespaces $RR2$ vs $RR3$ in function of $\qopname  \relax o{log}(n)$ \relax }}{57}\protected@file@percent }
-\newlabel{comparisonComExtr2}{{4.14}{57}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.5}Additional Tests?}{57}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {4.7}{\ignorespaces $\qopname  \relax o{log}$(computation time of $\bar  {c}_1^n$) vs $\qopname  \relax o{log}(n)$.\relax }}{51}\protected@file@percent }
+\newlabel{comptimes}{{4.7}{51}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.3}Richardson-Romberg's extrapolations.}{51}\protected@file@percent }
+\newlabel{section: confirmingRR3}{{4.3}{51}}
+\@writefile{lot}{\contentsline {table}{\numberline {4.3}{\ignorespaces Richardson Romberg's estimates and computation times.\relax }}{53}\protected@file@percent }
+\newlabel{tavolarichardsonrombergtest1}{{4.3}{53}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.8}{\ignorespaces $RR2$ vs $RR3$: the red and blue lines are $\bar  {\psi }^n_{RR,3}(T)$ and $\bar  {\psi }^n_{RR,2}(T)$, respectively, as functions of $\qopname  \relax o{log}(n)$.\relax }}{53}\protected@file@percent }
+\newlabel{comparisonComExtr}{{4.8}{53}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.4}Another Test with different parameters}{53}\protected@file@percent }
+\newlabel{eq: NumericalTestParameters2}{{4.9}{53}}
+\@writefile{lot}{\contentsline {table}{\numberline {4.4}{\ignorespaces Coefficients of the fractional power series.\relax }}{54}\protected@file@percent }
+\newlabel{tavolacoefficientstest2}{{4.4}{54}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.9}{\ignorespaces $f(k) = \qopname  \relax o{log}(|a_k|)$\relax }}{54}\protected@file@percent }
+\newlabel{barbaz2}{{4.9}{54}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.10}{\ignorespaces (a) $n = 16$\relax }}{55}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {4.11}{\ignorespaces (a) $n = 64$\relax }}{55}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {4.12}{\ignorespaces (a) $n = 256$\relax }}{56}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {4.5}{\ignorespaces Values of $\bar  {c_1}^n$ and computation times.\relax }}{56}\protected@file@percent }
+\newlabel{tavolavaluesofc1test2}{{4.5}{56}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.13}{\ignorespaces $f(n)=\bar  {c}_1^n $\relax }}{57}\protected@file@percent }
+\newlabel{c1plot2}{{4.13}{57}}
+\@writefile{lot}{\contentsline {table}{\numberline {4.6}{\ignorespaces Richardson Romberg's estimates and computation times.\relax }}{57}\protected@file@percent }
+\newlabel{tavolarichardsonrombergtest2}{{4.6}{57}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.14}{\ignorespaces $RR2$ vs $RR3$ in function of $\qopname  \relax o{log}(n)$ \relax }}{58}\protected@file@percent }
+\newlabel{comparisonComExtr2}{{4.14}{58}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.5}Additional Tests?}{58}\protected@file@percent }
 \@writefile{toc}{\contentsline {chapter}{\numberline {5}Other Plus final comments}{59}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
