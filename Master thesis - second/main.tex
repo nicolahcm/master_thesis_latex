@@ -1277,7 +1277,7 @@ Nevertheless we can have a faster convergence through an extrapolation if the me
 
 \section{Extrapolated Hybrid Method}
 \label{section: extrapolatedhyb}
-If we assume true the error estimate \eqref{eq: 30inthepaper}, then, from the hybrid Euler expansion we can get an approximator for $\psi(T)$, namely the 
+If we assume the error estimate \eqref{eq: 30inthepaper}, then, from the hybrid Euler expansion we can get an approximator for $\psi(T)$, namely the 
 Richardson-Romberg Approximator:
 \begin{equation}
     \label{eq: RR.1}
@@ -1383,7 +1383,7 @@ Let $n$ be fixed. The general procedure to compute $\bar{\psi}^n(T)$ (the $n$-th
 \\
 \\
 2) [\textit{Fractional Power Series.}]
-Compute the coefficients $a_k$ ($k\in \mathbb{N}$) of the fractional power series $\psi(t) = \sum_{k\ge 1}^\infty a_k t^{k\alpha}$ up to $r_{max}$, using the recursive relation $(A_{\lambda, \mu, \nu})$ (recall \eqref{eq: recurrent1}). Therefore, in place of $\psi(t) = \sum_{k\ge 1}^\infty a_k t^{k\alpha}$, we will consider $\psi^{tr}(t) = \sum_{k\ge 1}^{r_{max}} a_k t^{k\alpha}.$
+Compute the coefficients $a_k$ ($k\in \mathbb{N}$) of the fractional power series $\psi(t) = \sum_{k\ge 1}^\infty a_k t^{k\alpha}$ up to $r_{max}$, using the recursive relation $(A_{\lambda, \mu, \nu})$ (recall \eqref{eq: recurrent1}). Namely, we will compute $\left\{ a_0, a_1, \cdots, a_{r_{max}} \right\}$.
 \\
 \\
 3) [\textit{Estimating The Convergence Radius.}]
@@ -1391,7 +1391,7 @@ Knowing the coefficient $a_{r_{max}}$ allows us to use formula \eqref{eq: estima
 \\
 \\
 4) [\textit{Truncation.}]
-Truncate the coefficients up to $a_{r_0}$, with $r_0$ computed through formula \eqref{eq: accuracyTruncation}.
+Truncate the coefficients up to $a_{r_0}$, with $r_0$ computed through formula \eqref{eq: accuracyTruncation}. Therefore, in place of $\psi(t) = \sum_{k\ge 1}^\infty a_k t^{k\alpha}$, we will consider $\psi^{tr}(t) := \sum_{k\ge 1}^{r_{0}} a_k t^{k\alpha}.$
 \\
 \\
 5) [\textit{Compute $\bar{\psi}^n(t_k)$ for $k=0,\cdots, n$.}]
@@ -1531,7 +1531,7 @@ Up to $n=4096$, the computation times were quite reasonable, being under $1$ min
 
 
 
-\subsection{Computational Optimization and Observations}
+\subsection{Computational Optimization and Observations.}
 As suggested in \cite{Main}, instead of solving for the Riccati differential equation $\mathcal{E}^0_{\lambda, \mu, \nu}$ (eq. \eqref{eq: fractionalRiccati}), we can solve for $\mathcal{E}^0_{1, \mu, \nu \lambda}$ if $\lambda\ne 0$, 
 being faster from the computational point of view and equivalent to the original modulo scalar non-null multiplications. 
 More precisely we have the following Lemma:
@@ -1784,12 +1784,6 @@ Otherwise, if we have limited time and computational power, we can go for the si
   \includegraphics[width=\textwidth]{extrapolated/extrapolated.png}
   \caption{$RR2$ vs $RR3$: the red and blue lines are $\bar{\psi}^n_{RR,3}(T)$ and $\bar{\psi}^n_{RR,2}(T)$, respectively, as functions of $\log(n)$.}\label{comparisonComExtr}
 \end{figure}
-
-
-
-
-
-
 
 
 \section{Another Test with different parameters}
