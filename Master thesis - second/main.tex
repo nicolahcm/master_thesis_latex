@@ -1368,7 +1368,7 @@ Note that to $\alpha=0.64$ corresponds to $H=\alpha - \frac{1}{2}= 0.14$, which 
 We will consider $\psi$, the solution to the Riccati differential equation $\mathcal{E}^0_{\lambda, \mu, \nu}$ (eq. \eqref{eq: fractionalRiccati}) restricted to the real positive axis instead of all $\mathbb{R}$, i.e., $$\psi: \mathbb{R}_+ \to \mathbb{R}.$$
 Let us see the general procedure of the hybrid Euler scheme.
 
-\section{General Procedure} 
+\section{General Procedure.} 
 \label{section: generalprocedure}
 
 Let $n$ be fixed. The general procedure to compute $\bar{\psi}^n(T)$ (the $n$-th Euler discretization, described in Subsections \ref{subsection: firstpsin} and \ref{subsection: secondpsin}, evaluated at $T>0$), after having set the parameters $\alpha,\lambda,\mu,\nu, T$ and the accuracy measure $\epsilon_0$, consists of the following steps:
@@ -1378,7 +1378,7 @@ Let $n$ be fixed. The general procedure to compute $\bar{\psi}^n(T)$ (the $n$-th
 \\
 \\
 2) [\textit{Fractional Power Series.}]
-Compute the coefficients $a_k$ ($k\in \mathbb{N}$) of the fractional power series $\psi(t) = \sum_{k= 1}^\infty a_k t^{k\alpha}$ up to $r_{max}$, using the recursive relation $(A_{\lambda, \mu, \nu})$ (recall \eqref{eq: recurrent1}). Namely, we will compute $\left\{ a_0, a_1, \cdots, a_{r_{max}} \right\}$.
+Compute the coefficients $a_k$ ($k\in \mathbb{N}$) of the fractional power series $\psi(t) = \sum_{k= 1}^\infty a_k t^{k\alpha}$ up to the $r_{max}$-th coefficient, using the recursive relation $(A_{\lambda, \mu, \nu})$ (recall \eqref{eq: recurrent1}). Namely, we will compute $\left\{ a_0, a_1, \cdots, a_{r_{max}} \right\}$.
 \\
 \\
 3) [\textit{Estimating The Convergence Radius.}]
@@ -1386,19 +1386,18 @@ Knowing the coefficient $a_{r_{max}}$ allows us to use formula \eqref{eq: estima
 \\
 \\
 4) [\textit{Truncation.}]
-Truncate the coefficients up to $a_{r_0}$, with $r_0$ computed through formula \eqref{eq: accuracyTruncation}. Therefore, in place of $\psi(t) = \sum_{k= 1}^\infty a_k t^{k\alpha}$, we will consider $\psi^{tr}(t) := \sum_{k= 1}^{r_{0}} a_k t^{k\alpha}.$
-\\
+Truncate the coefficients the $r_0$-th coefficient, with $r_0$ defined through formula \eqref{eq: accuracyTruncation}. Therefore, in place of $\psi(t) = \sum_{k= 1}^\infty a_k t^{k\alpha}$, we will consider $$\psi^{tr}(t) := \sum_{k= 1}^{r_{0}} a_k t^{k\alpha}.$$
 \\
 5) [\textit{Compute $\bar{\psi}^n(t_k)$ for $k=0,\cdots, n$.}]
 For $n\in \mathbb{N}$ fixed, compute $\bar{\psi}^n(t_k)$ for $k=0,\cdots,n$ (recall $t_k$ defined in \eqref{eq: tk and k0}) in the following way: use the fractional power series for $k=0,1,\cdots, k_0$, where {\small $k_0 = \left \lfloor\frac{n\theta \widehat{R}_\psi}{T} \right\rfloor$}, and use the recursive formula \eqref{eq: 28inthepaper} for $k = k_0+1, k_0+2, \cdots, n$. Note that if $\theta \widehat{R}_\psi >T$, then there is no need to use \eqref{eq: 28inthepaper}.
 
-\subsection{Numerical Results}
+\subsection{Numerical Results.}
 
 We ran a test with the parameters \eqref{eq: NumericalTestParameters}, the precision set to $\epsilon_0 = 0.01$
 and $T=\frac{1}{252}$. The first $4$ steps are indipendent of $n$, so that the procedure in these steps is the same when computing $\bar{\psi}^n(t_k)$ for any $n$ positive integer.
 \\
 \\
-\textbf{Step 1.} We chose $r_{max}=105$ and $\theta = 0.9$. The choice of $r_{max}$ being due to machine's limitations (the absolute values of the coefficients grow very fast as we can see from Figure \ref{barbaz} and Table \ref{tavola1coefficienti}). 
+\textbf{Step 1.} We chose $r_{max}=105$ and $\theta = 0.9$. The choice of $r_{max}$ being due to machine's limitations (the absolute value of the coefficients grows very fast, as we can see from Figure \ref{barbaz} and Table \ref{tavola1coefficienti}). 
 \\
 \\
 \textbf{Step 2.} The coefficients were computed up to the $r_{max}$-th coefficient. 
@@ -1439,7 +1438,7 @@ In Table \ref{tavola1coefficienti} are displayed some of the coefficients that w
 
 \noindent
 The growth of the absolute values of the coefficients $\left\{ |a_k|\right\}_{k\in\mathbb{N}}$ is exponential, confirmed by Figure \ref{barbaz} where is plotted the curve $f(k): = \log(|a_k|)$ for $k=0,1,\cdots, 105$.
-
+\\
 
 \begin{figure}[ht]
   \includegraphics[width=\textwidth, height=60mm]{coefficients/logcoeff.png}
@@ -1472,8 +1471,6 @@ For $ t_0, t_1, \cdots, t_{k_0}$ the fractional power series is used, i.e., we s
 $$\bar{\psi}^n(t_k) = \sum_{n=0}^{102} a_n t_k^n, \hspace{0.4cm} k=0,\cdots, k_0.$$
 While for $t_{k_0+1}, \cdots, t_n$, the recurrent formula \eqref{eq: 28inthepaper} based on the Euler scheme is used. 
 \\
-\\
-In Figure \ref{fig: psi n=16}, \ref{fig: psi n=64} and \ref{fig: psi n=256} we display some plots of $\bar{\psi}^n$ for different values of $n$ ($n=16,64,256$, respectively).
 
 \begin{figure}[p]
   \includegraphics[width=\textwidth, height=60mm]{barpsin/n = 16.png}
@@ -1491,19 +1488,7 @@ In Figure \ref{fig: psi n=16}, \ref{fig: psi n=64} and \ref{fig: psi n=256} we d
 \end{figure}
 
 
-%\begin{figure}[H]
-%\begin{tabular}{cc}
-%  \includegraphics[width=\textwidth, height= 60mm]{barpsin/n = 16.png}\\
-%(a) n = 16  \\[1pt]
-% \includegraphics[width=\textwidth, height= 60mm]{barpsin/n = 64.png} \\
-%(b) n = 64 \\[1pt]
-%\includegraphics[width=\textwidth, height= 60mm]{barpsin/n = 256.png} \\
-%(c) n = 256
-%\end{tabular}
-%\caption{$\bar{\psi}^n$ plots} \label{fig:fBm11}
-%\end{figure}
-
-In Figure \ref{fig: psi n=256}, \ref{fig: psi n=64} and \ref{fig: psi n=16}, where we plotted some $\bar{\psi}^n$ for different values of $n$ ($n=16,64,256$), each point represents the value of $\bar{\psi}^n(t_l)$ for $l\in \left\{ 1,2,\cdots, n\right\}$. The red line is the value of $t_{k_0}$, which is the threshold that separates the methods we applied in order to compute the values of $\bar{\psi}^n(t_l)$, $l\in \left\{ 1,2,\cdots, n\right\}$: the fractional power series is applied with the points on the left-side of the threshold $t_{k_0}$ (i.e., for $t_0, t_1 \cdots, t_{k_0}$), and the Euler scheme with those on the right-side (i.e., for $t_{k_0+1}, \cdots, t_n$).
+In Figure \ref{fig: psi n=16}, \ref{fig: psi n=64} and \ref{fig: psi n=256} we display some plots of $\bar{\psi}^n$ for different values of $n$ ($n=16,64,256$, respectively). In these plots each point represents the value of $\bar{\psi}^n(t_l)$ for $l\in \left\{ 1,2,\cdots, n\right\}$. The red line is the value of $t_{k_0}$, which is the threshold that separates the methods we applied in order to compute the values of $\bar{\psi}^n(t_l)$, $l\in \left\{ 1,2,\cdots, n\right\}$: the fractional power series is applied with the points on the left-side of the threshold $t_{k_0}$ (i.e., for $t_0, t_1 \cdots, t_{k_0}$), and the Euler scheme with those on the right-side (i.e., for $t_{k_0+1}, \cdots, t_n$).
 \\
 Notice that the transition from the evaluation of the power series to the Euler scheme is ``smooth", even though we applied two different techniques. This suggests that the hybrid approach is consistent. 
 
@@ -1519,10 +1504,11 @@ As suggested in \cite{Main}, instead of solving for the Riccati differential equ
 being faster from the computational point of view and equivalent to the original modulo scalar non-null multiplications. 
 More precisely, we have the following Lemma:
 \begin{lemma}
+\label{lemma: easier mult r}
 Let $\phi$ be a solution to the Riccati differential equation $\mathcal{E}^0_{1, \mu, \nu \lambda}$ (eq. \eqref{eq: fractionalRiccati}) and $\lambda \ne 0$.
 Then $\psi := \frac{\phi}{\lambda}$ is a solution to $\mathcal{E}^0_{\lambda, \mu, \nu}$.
 \end{lemma}
-\begin{proof}
+\begin{proof} [Proof. of Lemma \ref{lemma: easier mult r}.] 
 Let $\phi$ be a solution to $\mathcal{E}^0_{1, \mu, \nu \lambda}$. Therefore it holds
 $$D^\alpha \phi = \phi^2 + \mu \phi + \nu \lambda. $$
 Dividing both sides by $\lambda$ (we assumed $\lambda \ne 0)$ yields to
@@ -1682,8 +1668,8 @@ In our particular case it would be $(1-\beta) = -0.6838$, namely $\beta \approx 
 However, in all of this, it is noted in \cite{Main} (in Section $4.5$) that the regression coefficient changes as we consider wider ranges of values for $n$ (we are not able to verify this due to limited computation power: for $n=2^{17}$, the evaluation of $\bar{c}_1^n$ already takes four hours).
 \\
 
-These observations suggest that the RR estimate of second order (eq. \eqref{eq: moreAccurateEstimate}) and the estimate in equation \eqref{eq: estimateRRwithbeta} do not hold true.
- However, all this does not imply that the double step RR extrapolation (described in Subsection \ref{subsection: multiStepRR} and equation \eqref{eq: multiStepRR}) is useless: we remind that $\left\{ \bar{\psi}^n_{_{RR,3}} \right\}_{n \in \mathbb{N}}$ does converge to $\psi$ (as $n\to +\infty$), but the convergence rate \eqref{eq: rr3 convergence rate} might not hold since the second order RR estimate \eqref{eq: moreAccurateEstimate}, from which it follows, seems not to hold. 
+These observations suggest that the RR estimate of second order (eq. \eqref{eq: moreAccurateEstimate}) and the estimate in equation \eqref{eq: estimateRRwithbeta} do not hold.
+ However, all this does not imply that the double step RR extrapolation (described in Subsection \ref{subsection: multiStepRR} and equation \eqref{eq: multiStepRR}) is without any purpose: we remind that $\left\{ \bar{\psi}^n_{_{RR,3}} \right\}_{n \in \mathbb{N}}$ does converge to $\psi$ (as $n\to +\infty$), but the convergence rate \eqref{eq: rr3 convergence rate} might not hold since the second order RR estimate \eqref{eq: moreAccurateEstimate}, from which it follows, seems not to hold. 
 \\
 Below in Section \ref{section: confirmingRR3} we will compare the computation times between the single step RR extrapolation method and the double step (i.e., computation times in seconds of $\left\{ \bar{\psi}^n_{_{RR,2}} \right\}_{n \in \mathbb{N}}$ and $\left\{ \bar{\psi}^n_{_{RR,3}} \right\}_{n \in \mathbb{N}}$, respectively, for some values of $n$) and the convergence rate in function of $n$.
 
@@ -1695,13 +1681,15 @@ From Table \ref{c1table} we can observe that the computation time of $\left\{ \b
 \\
 In Figure \ref{comptimes} is presented the plot of $\log$(computation time of $\bar{c}_1^n$) vs $\log(n)$.
 
+Applying a linear regression to the curve in Figure \ref{comptimes}, yields a linear coefficient of $1.99993845$ that is fitting the curve. We could have already expected it by looking at the results in Table \ref{c1table} (for $n=2^{15}$, computing $\bar{c_1}^n$ requires about fifteen minutes, while for  $n=2^{16}$ it takes an hour and for $n=2^{17}$ it takes four hours of computation).
+
 \begin{figure}[ht]
-  \includegraphics[width=\textwidth, height=65mm]{c1n/comp_times.png}
+  \includegraphics[width=\textwidth, height=55mm]{c1n/comp_times.png}
   \caption{$\log$(computation time of $\bar{c}_1^n$) vs $\log(n)$.}\label{comptimes}
 \end{figure}
 
-Applying a linear regression to the curve in Figure \ref{comptimes} yields a linear coefficient of $1.99993845$ fitting the curve. We could have already expected it by looking at the results in Table \ref{c1table} (for $n=2^{15}$, computing $\bar{c_1}^n$ requires about fifteen minutes, while for  $n=2^{16}$ it takes an hour and for $n=2^{17}$ it takes four hours of computation).
 
+\newpage
 
 \section{Richardson-Romberg's extrapolations.}
 \label{section: confirmingRR3}
@@ -1709,7 +1697,8 @@ Now we compare the single step RR extrapolation (from which we obtain the sequen
 $\left\{ \bar{\psi}^n_{_{RR,2}} \right\}_{n \in \mathbb{N}}$
 ) with the double step RR extrapolation (from which we obtain the sequence 
 $\left\{ \bar{\psi}^n_{_{RR,3}} \right\}_{n \in \mathbb{N}}$
-) in terms of computation times\footnote{In seconds. We remind that we use a computer with the following properties: 12 CPUs i7-8750H  @ 2.20GHz. Even though the absolute times might change in different machines, we are more interested in ratios among different computation times.} and convergence rate (as $n\to +\infty$). 
+) in terms of computation times\footnote{In seconds. We remind that we use a computer with the following properties: 12 CPUs i7-8750H  @ 2.20GHz. 
+Even though the absolute times might change in different machines, we are more interested in ratios among different computation times.} and convergence rate (as $n\to +\infty$). 
 \\
 
 We can observe from Table \ref{tavolarichardsonrombergtest1} and Figure \ref{comparisonComExtr} the values of $\bar{\psi}^n_{_{RR,2}}(T)$ and $\bar{\psi}^n_{_{RR,3}}(T)$ for some $n$. The value of $\bar{\psi}^n_{_{RR,3}}(T)$ is computed through equation \eqref{eq: RR.1}, which we recall being
@@ -1726,7 +1715,7 @@ This is indeed confirmed by the results in Table \ref{tavolarichardsonrombergtes
 
 So far, the sequence $\left\{ \bar{\psi}^n_{_{RR,3}}(T)\right\}_{n\in \mathbb{N}}$ seems not to have any advantage over $\left\{ \bar{\psi}^n_{_{RR,2}}(T)\right\}_{n\in \mathbb{N}}$, as it takes more time to be computed. 
 However, there is a particular aspect of the double step RR extrapolation: it converges faster as $n\to +\infty$. We can observe this in Figure \ref{comparisonComExtr} where are plotted the curves of $\bar{\psi}^n_{_{RR,3}}(T)$ and $\bar{\psi}^n_{_{RR,2}}(T)$ as functions of $\log(n)$. 
-Both curves converge to the same value, as we already know (recall Remark \ref{remark: rr2 and rr3 do converge}), but $\bar{\psi}^n_{_{RR,3}}(T)$ converges at a faster rate than $\bar{\psi}^n_{_{RR,2}}(T)$, as $n\to +\infty$.
+Both curves converge to the same value, as we already know from Remark \ref{remark: rr2 and rr3 do converge}, but $\bar{\psi}^n_{_{RR,3}}(T)$ converges at a faster rate than $\bar{\psi}^n_{_{RR,2}}(T)$, as $n\to +\infty$.
 \\
 
 Finally, deciding whether to use $\left\{ \bar{\psi}^n_{_{RR,3}}(T)\right\}_{n\in \mathbb{N}}$ or $\left\{ \bar{\psi}^n_{_{RR,2}}(T)\right\}_{n\in \mathbb{N}}$ in order to approximate the solution $\psi(T)$ to the Riccati differential equation $\mathcal{E}^0_{\lambda, \mu, \nu}$ (equation \eqref{eq: fractionalRiccati}) is up to convenience: if we do not mind about the computation time and want a high accuracy, we can use the double step RR extrapolation. 
@@ -1775,7 +1764,7 @@ Therefore, both the single and double step RR extrapolation might prove useful i
 \end{figure}
 
 
-\section{Another Test with different parameters}
+\section{Another Test with different parameters.}
 In this Section we run again the hybrid Euler scheme with a different set of parameters and will observe whether the previous analyzied behaviours are mantained or not. The parameters used in this test are:
 \begin{equation}
     \label{eq: NumericalTestParameters2}
@@ -1929,14 +1918,15 @@ The results are displayed in Table \ref{tavolarichardsonrombergtest2},
 
 
 \begin{figure}[ht]
-  \includegraphics[width=\textwidth, height=42mm]{coefficients_test_2/extrapolatedrr.png}
+  \includegraphics[width=\textwidth, height=60mm]{coefficients_test_2/extrapolatedrr.png}
   \caption{$RR2$ vs $RR3$: the red and blue lines are $\bar{\psi}^n_{RR,3}(T)$ and $\bar{\psi}^n_{RR,2}(T)$, respectively, as functions of $\log(n)$. This comes from the test with parameters \eqref{eq: NumericalTestParameters2}.}\label{comparisonComExtr2}
 \end{figure}
 
 
 \begin{figure}[ht]
-  \includegraphics[width=\textwidth, height=42mm]{coefficients_test_2/extrapolatedrr_fine.png}
-  \caption{same curves as of Figure \ref{comparisonComExtr2} zoomed on the $y$-axis. $RR2$ vs $RR3$: the red and blue lines are $\bar{\psi}^n_{RR,3}(T)$ and $\bar{\psi}^n_{RR,2}(T)$, respectively, as functions of $\log(n)$. }\label{comparisonComExtr2_fine}
+  \includegraphics[width=\textwidth, height=60mm]{coefficients_test_2/extrapolatedrr_fine.png}
+  \caption{same curves as of Figure \ref{comparisonComExtr2} zoomed on the $y$-axis. $RR2$ vs $RR3$: the red and blue lines are $\bar{\psi}^n_{RR,3}(T)$ and $\bar{\psi}^n_{RR,2}(T)$, respectively, as functions of $\log(n)$.
+  This comes from the test with parameters \eqref{eq: NumericalTestParameters2}. }\label{comparisonComExtr2_fine}
 \end{figure}
 
 Summarising, many of the behaviours observed in the test with the parameters, \eqref{eq: NumericalTestParameters} are also observed with the parameters \eqref{eq: NumericalTestParameters2}. 
