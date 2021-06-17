@@ -1441,7 +1441,7 @@ In Table \ref{tavola1coefficienti} are displayed some of the coefficients that w
 The growth of the absolute values of the coefficients $\left\{ |a_k|\right\}_{k\in\mathbb{N}}$ is exponential, confirmed by Figure \ref{barbaz} where is plotted the curve $f(k): = \log(|a_k|)$ for $k=0,1,\cdots, 105$.
 
 
-\begin{figure}[H]
+\begin{figure}[ht]
   \includegraphics[width=\textwidth, height=60mm]{coefficients/logcoeff.png}
   \caption{plot of the curve $f(k) = \log(|a_k|)$, $k=0,1,\cdots,105$, confirming the exponential growth of the absolute values of the coefficients $\left\{|a_k|\right\}_{k\in\mathbb{N}} $ of $\psi(t) = \sum_{k=0}^\infty a_kt^{k\alpha}$.}
 \label{barbaz}
@@ -1475,18 +1475,18 @@ While for $t_{k_0+1}, \cdots, t_n$, the recurrent formula \eqref{eq: 28inthepape
 \\
 In Figure \ref{fig: psi n=16}, \ref{fig: psi n=64} and \ref{fig: psi n=256} we display some plots of $\bar{\psi}^n$ for different values of $n$ ($n=16,64,256$, respectively).
 
-\begin{figure}[H]
-  \includegraphics[width=\textwidth, height=55mm]{barpsin/n = 16.png}
+\begin{figure}[p]
+  \includegraphics[width=\textwidth, height=60mm]{barpsin/n = 16.png}
   \caption{(a) curve of $\bar{\psi}^{16}(t)$ evaluated at $t=t_0,t_1,\cdots ,t_{16}$.} \label{fig: psi n=16}
 \end{figure}
 
-\begin{figure}[H]
-  \includegraphics[width=\textwidth, height= 55mm]{barpsin/n = 64.png}
+\begin{figure}[p]
+  \includegraphics[width=\textwidth, height= 60mm]{barpsin/n = 64.png}
   \caption{(b) curve of $\bar{\psi}^{64}(t)$ evaluated at $t=t_0,t_1,\cdots ,t_{64}$.} \label{fig: psi n=64}
 \end{figure}
 
-\begin{figure}[H]
-  \includegraphics[width=\textwidth, height= 55mm]{barpsin/n = 256.png}
+\begin{figure}[p]
+  \includegraphics[width=\textwidth, height= 60mm]{barpsin/n = 256.png}
   \caption{(c) curve of $\bar{\psi}^{256}(t)$ evaluated at $t=t_0,t_1,\cdots ,t_{256}$.} \label{fig: psi n=256}
 \end{figure}
 
@@ -1617,12 +1617,12 @@ In the next Subsection \ref{subsection: plots and confirm rr estimate} we will s
 
 Figure \ref{c1plot1} and \ref{c1plot1v2} show $\bar{c_1}^n$ as a function of $n$ (for numerical values see Table \ref{c1table}).
 
-\begin{figure}[h]
+\begin{figure}[ht]
   \includegraphics[width=\textwidth, height=55mm]{c1n/c_1^n.png}
   \caption{we plot $\bar{c}_1^n$ as a function of $n$: $f(n):=\bar{c}_1^n $.}\label{c1plot1}
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}[ht]
   \includegraphics[width=\textwidth, height=55mm]{c1n/c_1^n_zoomed.png}
   \caption{the same plot as Figure \ref{c1plot1} ($\bar{c}_1^n$ as a function of $n$: $f(n):=\bar{c}_1^n$) but zoomed on the $y$-axis.}\label{c1plot1v2}
 \end{figure}
@@ -1635,7 +1635,7 @@ However, this is not a sufficient condition for the RR estimate to hold.
 
 Now, the plot in Figure \ref{c1plotlog} shows  $\log(\bar{c_1}^n-\bar{c_1}^{ref})$ as a function of $\log(n)$.
 
-\begin{figure}[h]
+\begin{figure}[ht]
   \includegraphics[width=\textwidth, height=55mm]{c1n/c_1log.png}
   \caption{$\log(\bar{c_1}^n-\bar{c_1}^{ref})$ vs $\log(n)$. }\label{c1plotlog}
 \end{figure}
@@ -1695,7 +1695,7 @@ From Table \ref{c1table} we can observe that the computation time of $\left\{ \b
 \\
 In Figure \ref{comptimes} is presented the plot of $\log$(computation time of $\bar{c}_1^n$) vs $\log(n)$.
 
-\begin{figure}[H]
+\begin{figure}[ht]
   \includegraphics[width=\textwidth, height=65mm]{c1n/comp_times.png}
   \caption{$\log$(computation time of $\bar{c}_1^n$) vs $\log(n)$.}\label{comptimes}
 \end{figure}
@@ -1768,9 +1768,10 @@ Therefore, both the single and double step RR extrapolation might prove useful i
 \end{table}
 
 
-\begin{figure}[H]
+\begin{figure}[ht]
   \includegraphics[width=\textwidth, height=55mm]{extrapolated/extrapolated.png}
-  \caption{$RR2$ vs $RR3$: the red and blue lines are $\bar{\psi}^n_{RR,3}(T)$ and $\bar{\psi}^n_{RR,2}(T)$, respectively, as functions of $\log(n)$.}\label{comparisonComExtr}
+  \caption{$RR2$ vs $RR3$: the red and blue lines are $\bar{\psi}^n_{RR,3}(T)$ and $\bar{\psi}^n_{RR,2}(T)$, respectively, as functions of $\log(n)$.
+ This comes from the test with parameters \eqref{eq: NumericalTestParameters}.}\label{comparisonComExtr}
 \end{figure}
 
 
@@ -1787,7 +1788,7 @@ We also set $T=\frac{1}{252}$, the accuracy $\epsilon_0=0.01$ and $r_{max}=105$ 
 The coefficients of the fractional power series $\psi(t) = \sum_{k=0}^{+\infty} a_kt^{k\alpha}$ that we obtained are partially presented in Table \ref{tavolacoefficientstest2}.
 
 
-\begin{table}[h]
+\begin{table}[ht]
 \centering
 \begin{tabular}{ |c|c| |c|c| |c|c| } 
  \hline
@@ -1823,7 +1824,7 @@ In this case the growth of the absolute values of the coefficients $\left\{ |a_k
 %\eqref{eq: NumericalTestParameters2} 
 %\eqref{eq: NumericalTestParameters}
 
-\begin{figure}[H]
+\begin{figure}[ht]
   \includegraphics[width=\textwidth, height=50mm]{coefficients_test_2/output.png}
   \caption{plot of the curve $f(k) = \log(|a_k|)$, $k=0,1,\cdots,105$, confirming, also in this test, the exponential growth of the absolute values of the coefficients $\left\{|a_k|\right\}_{k\in\mathbb{N}} $ of $\psi(t) = \sum_{k=0}^\infty a_kt^{k\alpha}$.}\label{barbaz2}
 \end{figure}
@@ -1832,17 +1833,17 @@ Using the Euler Discretization scheme we computed some $\bar{\psi}^n$. In Figure
 
 
 \begin{figure}[pH]
-  \includegraphics[width=\textwidth, height=50mm]{coefficients_test_2/n = 16.png}
+  \includegraphics[width=\textwidth, height=60mm]{coefficients_test_2/n = 16.png}
   \caption{(a) curve of $\bar{\psi}^{16}(t)$ evaluated at $t=t_0,t_1,\cdots ,t_{16}$.}\label{fig: ante2psi_16}
 \end{figure}
 
 \begin{figure}[pH]
-  \includegraphics[width=\textwidth, height=50mm]{coefficients_test_2/n = 64.png}
+  \includegraphics[width=\textwidth, height=60mm]{coefficients_test_2/n = 64.png}
   \caption{(b) curve of $\bar{\psi}^{64}(t)$ evaluated at $t=t_0,t_1,\cdots ,t_{64}$.}\label{fig: ante2psi_64}
 \end{figure}
 
 \begin{figure}[pH]
-  \includegraphics[width=\textwidth, height=50mm]{coefficients_test_2/n = 256.png}
+  \includegraphics[width=\textwidth, height=60mm]{coefficients_test_2/n = 256.png}
   \caption{(c) curve of $\bar{\psi}^{256}(t)$ evaluated at $t=t_0,t_1,\cdots ,t_{256}$.}\label{fig: ante2psi_256}
 \end{figure}
 
@@ -1883,7 +1884,7 @@ As for the sequence $\left\{\bar{c_1}^n \right\}_{n\in \mathbb{N}}$ (recall eq. 
 \label{tavolavaluesofc1test2}
 \end{table}
 
-\begin{figure}[H]
+\begin{figure}[ht]
   \includegraphics[width=\textwidth, height=60mm]{coefficients_test_2/c_1^n.png}
   \caption{we plot $\bar{c}_1^n$ as a function of $n$: $f(n):=\bar{c}_1^n $.}\label{c1plot2}
 \end{figure}
@@ -1927,13 +1928,13 @@ The results are displayed in Table \ref{tavolarichardsonrombergtest2},
 \end{table}
 
 
-\begin{figure}[H]
+\begin{figure}[ht]
   \includegraphics[width=\textwidth, height=42mm]{coefficients_test_2/extrapolatedrr.png}
-  \caption{$RR2$ vs $RR3$: the red and blue lines are $\bar{\psi}^n_{RR,3}(T)$ and $\bar{\psi}^n_{RR,2}(T)$, respectively, as functions of $\log(n)$.}\label{comparisonComExtr2}
+  \caption{$RR2$ vs $RR3$: the red and blue lines are $\bar{\psi}^n_{RR,3}(T)$ and $\bar{\psi}^n_{RR,2}(T)$, respectively, as functions of $\log(n)$. This comes from the test with parameters \eqref{eq: NumericalTestParameters2}.}\label{comparisonComExtr2}
 \end{figure}
 
 
-\begin{figure}[H]
+\begin{figure}[ht]
   \includegraphics[width=\textwidth, height=42mm]{coefficients_test_2/extrapolatedrr_fine.png}
   \caption{same curves as of Figure \ref{comparisonComExtr2} zoomed on the $y$-axis. $RR2$ vs $RR3$: the red and blue lines are $\bar{\psi}^n_{RR,3}(T)$ and $\bar{\psi}^n_{RR,2}(T)$, respectively, as functions of $\log(n)$. }\label{comparisonComExtr2_fine}
 \end{figure}
