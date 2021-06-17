@@ -34,7 +34,6 @@
 \contentsline {subsection}{\numberline {4.2.2}Computational times for the sequence $\left \{ \bar {c}_1^n \right \}_{n\in \mathbb {N}}$.}{50}%
 \contentsline {section}{\numberline {4.3}Richardson-Romberg's extrapolations.}{51}%
 \contentsline {section}{\numberline {4.4}Another Test with different parameters}{53}%
-\contentsline {section}{\numberline {4.5}Additional Tests?}{57}%
 \contentsline {chapter}{\numberline {5}Other Plus final comments}{59}%
 \contentsline {section}{\numberline {5.1}Forse aggiungerà la parte di machine learning se andrò in russia.}{59}%
 \contentsline {section}{\numberline {5.2}Commenti finali}{59}%
