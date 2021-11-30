@@ -368,7 +368,7 @@ $\bullet$ $W^H_0 = 0$ a.s. and $E[W^H_t] = 0$ for all $t\ge 0$.
 \\
 $\bullet$ $W^H_t$ has stationary increments: the law of $\left( W^H_{t+s}-W^H_t \right)$ is the same as the law of $W^H_t$, for all $s,t\ge 0$.
 \\
-$\bullet$ $W^H_t$ has continuous trajectories \footnote{Note that a centered Gaussian process may not have continuous trajectories. See Example $2.1$ in \cite{StevenGaussian}.}.
+$\bullet$ $W^H_t$ admits a continuous modification with continuous trajectories \footnote{Note that a centered Gaussian process may not have continuous trajectories. See Example $2.1$ in \cite{StevenGaussian}.}.
 \end{proposition}
 \\
 \begin{proof}
@@ -416,15 +416,13 @@ One main fact is that, while for $H=\frac{1}{2}$ the increments of $W^H_t$ are i
 More precisely, 
 
 \begin{remark}
-The correlation between $\left( W^H_{t+h}-W^H_t\right)$ and \\
+Let $t=s+nh$ for $t,s,h\ge 0$ and $n\ge 1$ integer. 
+Then, the correlation between $\left( W^H_{t+h}-W^H_t\right)$ and \\
 $\left( W^H_{s+h}-W^H_s\right)$ is not zero if $H\ne \frac{1}{2}$. It is positive if $\frac{1}{2}<H<1$, and negative if $0<H<\frac{1}{2}$.
 \end{remark}
 
 \begin{proof}
-\\
 
-\noindent
-Let $t=s+nh$ for $t,s,h\ge 0$ and $n\ge 1$ integer. \\
 The covariance between $ \left( W^H_{t+h}-W^H_t) \right)$ and $\left( W^H_{s+h}-W^H_s \right)$ is
 \\
 
@@ -517,7 +515,7 @@ The paths of a fractional Brownian process $(W^H_t)_{t\ge 0}$ are at most $H$-H�
 
 \begin{theorem}[Regularity of Sample Paths of fBm]
 \label{theorem: regularityPaths}
-The sample paths of a fractional Brownian motion $W^H$ are $\alpha$-Hölder continuous for any $\alpha \in (0,H)$. Moreover, it is not $H$-Hölder continous.
+There exist a continuous modification of the fractional Brownian motion $W^H$, such that its sample paths are $\alpha$-Hölder continuous for any $\alpha \in (0,H)$. Moreover, it is not $H$-Hölder continous.
 \end{theorem}
 \noindent
 First let us recall:
